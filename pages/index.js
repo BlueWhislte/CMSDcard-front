@@ -1,22 +1,38 @@
 import Layout from '../component/layout'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <Layout>
       <main>
-
+        <div className="py-5 text-center text-white h-100 align-items-center d-flex" >
+          <div className="container py-5">
+            <div className="row">
+              <div className="mx-auto col-lg-8 col-md-10">
+                <h1 className="display-3 text-dark mb-4">歡迎來到<br />協同學生意見平台</h1>
+                <p className="lead text-dark mb-5">這是一個專屬於協同人的論壇，請在這裡自由發表對學校、對課程等等的看法</p>
+                <Link href="">
+                  <a className="btn btn-lg btn-primary mx-1">熱門文章</a>
+                </Link>
+                <Link href="">
+                  <a className="btn btn-lg mx-1 btn-outline-primary">我要註冊</a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer>
-        <div class="py-3">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 text-center d-md-flex align-items-center">
-                <i class="d-block fa fa-facebook-official text-muted fa-lg mx-4"></i><i
-                  class="d-block fa fa-instagram text-muted fa-lg mx-4"></i><i
-                    class="d-block fa fa-twitter text-muted fa-lg ml-0 mx-4"></i> <i
-                      class="d-block fa fa-3x mx-auto text-primary fa-commenting"></i>
-                <p class="mb-0 py-1">©2018 Pingendo All rights reserved</p>
+        <div className="py-3">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center d-md-flex align-items-center">
+                <i className="d-block fa fa-facebook-official text-muted fa-lg mx-4"></i><i
+                  className="d-block fa fa-instagram text-muted fa-lg mx-4"></i><i
+                    className="d-block fa fa-twitter text-muted fa-lg ml-0 mx-4"></i> <i
+                      className="d-block fa fa-3x mx-auto text-primary fa-commenting"></i>
+                <p className="mb-0 py-1">©2018 Pingendo All rights reserved</p>
               </div>
             </div>
           </div>
