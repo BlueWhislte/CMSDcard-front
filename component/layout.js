@@ -21,7 +21,7 @@ export default function Layout({ children }) {
 
             <div>{children}</div>
 
-            <footer className="fixed-bottom">
+            <footer className="fixed-bottom bg-light">
                 <div className="py-3">
                     <div className="container">
                         <div className="row">
