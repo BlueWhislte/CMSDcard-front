@@ -10,7 +10,7 @@ export default function Post() {
                                 <h4>阿好煩喔</h4>
                                 <p className="mb-0">爛死了爛死了爛死了</p>
                                 <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1" href="#">
-                                    <i className="fa fa-fw fa-1x py-1 fa-heart-o"></i>
+                                    <i className="fa fa-heart-o fa-fw fa-1x py-1 text-warning"></i>
                                 </a>
                             </div>
                         </div>
