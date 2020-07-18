@@ -12,7 +12,7 @@ export default function Nav() {
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"> <a class="nav-link">熱門文章</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#">先人文章</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#" contentEditable="true">我要投稿</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">我要投稿</a> </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"> <a class="nav-link" href="#">註冊</a> </li>
