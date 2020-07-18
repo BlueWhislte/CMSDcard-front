@@ -1,6 +1,9 @@
 import Layout from '../component/layout'
 import Link from 'next/link'
 
+// background
+// style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;"
+
 export default function Home() {
   return (
     <Layout>
