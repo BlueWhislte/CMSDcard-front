@@ -39,7 +39,7 @@ export default function Nav() {
                         </li>
                     </ul>
                     <Link href="">
-                        <a className="btn btn-primary navbar-btn ml-md-2">登入</a>
+                        <a className="btn navbar-btn ml-md-2" style={{ backgroundColor: "#12bbad" }}>登入</a>
                     </Link>
                 </div>
             </div>

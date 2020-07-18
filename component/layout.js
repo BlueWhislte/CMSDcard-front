@@ -29,7 +29,7 @@ export default function Layout({ children }) {
                                 <i className="d-block fa fa-facebook-official text-muted fa-lg mx-4" />
                                 <i className="d-block fa fa-instagram text-muted fa-lg mx-4" />
                                 <i className="d-block fa fa-twitter text-muted fa-lg ml-0 mx-4" />
-                                <i className="d-block fa fa-3x mx-auto text-primary fa-commenting" />
+                                <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: "#12bbad" }} />
                                 <p className="mb-0 py-1">©2018 Pingendo All rights reserved</p>
                             </div>
                         </div>
