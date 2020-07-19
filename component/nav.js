@@ -21,7 +21,7 @@ export default function Nav() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/">
+                            <Link href="/article/new">
                                 <a className="nav-link">最新文章</a>
                             </Link>
                         </li>
