@@ -1,5 +1,5 @@
-import Layout from '../component/layout'
-import Post from '../component/article/post'
+import Layout from '../../component/layout'
+import Post from '../../component/article/post'
 
 export default function Hot() {
     return (
