@@ -27,19 +27,19 @@ export default function Nav() {
                         </li>
                         <li className="nav-item">
                             <Link href="/404">
-                                <a className="nav-link" href="#">先人文章</a>
+                                <a className="nav-link">先人文章</a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="/article/post">
-                                <a className="nav-link" href="#">我要投稿</a>
+                                <a className="nav-link">我要投稿</a>
                             </Link>
                         </li>
                     </ul>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link href="">
-                                <a className="nav-link" href="#">註冊</a>
+                                <a className="nav-link">註冊</a>
                             </Link>
                         </li>
                     </ul>
