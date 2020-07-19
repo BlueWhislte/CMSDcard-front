@@ -22,7 +22,7 @@ export default function Post() {
                                         <textarea class="form-control" id="form30" rows="6" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" contenteditable="true">潑文</button>
+                                <button type="submit" class="btn" style={{background:"#12bbad", color:"#FFFFFF"}}>潑文</button>
                             </form>
                         </div>
                     </div>
