@@ -38,7 +38,7 @@ export default function Nav() {
                     </ul>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link href="">
+                            <Link href="/user/register">
                                 <a className="nav-link">註冊</a>
                             </Link>
                         </li>
