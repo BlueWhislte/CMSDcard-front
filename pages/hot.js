@@ -8,7 +8,7 @@ export default function Hot() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1 className="display-5">熱門</h1>
+                            <h1 className="display-5 mt-3">熱門文章</h1>
                         </div>
                     </div>
                 </div>
