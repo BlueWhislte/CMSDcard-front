@@ -31,7 +31,7 @@ export default function Nav() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="">
+                            <Link href="/article/post">
                                 <a className="nav-link" href="#">我要投稿</a>
                             </Link>
                         </li>
