@@ -13,11 +13,11 @@ export default function Post() {
                             <p className="mb-3">你的每個意見都是寶貴的意見!</p>
                             <form className="text-left">
                                 <div className="form-group">
-                                    <label for="form16">標題</label>
+                                    <label htmlFor="form16">標題</label>
                                     <input type="text" className="form-control" id="form16" placeholder="你的主題" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="form17">內文</label>
+                                    <label htmlFor="form17">內文</label>
                                     <div className="form-group">
                                         <textarea className="form-control" id="form30" rows="6" placeholder="你想說的話..."></textarea>
                                     </div>
