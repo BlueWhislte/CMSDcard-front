@@ -16,12 +16,17 @@ export default function Nav() {
                 <div className="collapse navbar-collapse" id="navbar11">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link href="/hot">
+                            <Link href="/article/hot">
                                 <a className="nav-link">熱門文章</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="">
+                            <Link href="/">
+                                <a className="nav-link">最新文章</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/404">
                                 <a className="nav-link" href="#">先人文章</a>
                             </Link>
                         </li>
