@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Nav() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{backgroundColor: "#000000"}}>
             <div className="container">
                 <Link href="/">
                     <a className="navbar-brand" href="#">
