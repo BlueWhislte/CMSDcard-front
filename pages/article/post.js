@@ -5,24 +5,24 @@ export default function Post() {
         <Layout>
             <br />
             <br />
-            <div class="py-5 text-center" >
-                <div class="container">
-                    <div class="row">
-                        <div class="mx-auto col-lg-6 col-10">
+            <div className="py-5 text-center" >
+                <div className="container">
+                    <div className="row">
+                        <div className="mx-auto col-lg-6 col-10">
                             <h1>投稿</h1>
-                            <p class="mb-3">你的每個意見都是寶貴的意見!</p>
-                            <form class="text-left">
-                                <div class="form-group">
+                            <p className="mb-3">你的每個意見都是寶貴的意見!</p>
+                            <form className="text-left">
+                                <div className="form-group">
                                     <label for="form16">標題</label>
-                                    <input type="text" class="form-control" id="form16" placeholder="你的主題" />
+                                    <input type="text" className="form-control" id="form16" placeholder="你的主題" />
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="form17">內文</label>
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="form30" rows="6" placeholder="你想說的話..."></textarea>
+                                    <div className="form-group">
+                                        <textarea className="form-control" id="form30" rows="6" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn" style={{background:"#12bbad", color:"#FFFFFF"}}>潑文</button>
+                                <button type="submit" className="btn" style={{background:"#12bbad", color:"#FFFFFF"}}>潑文</button>
                             </form>
                         </div>
                     </div>
