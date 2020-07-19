@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Top from './top'
 import Nav from './nav'
 
@@ -26,9 +27,21 @@ export default function Layout({ children }) {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 text-center d-md-flex align-items-center">
-                                <i className="d-block fa fa-facebook-official text-muted fa-lg mx-4" />
-                                <i className="d-block fa fa-instagram text-muted fa-lg mx-4" />
-                                <i className="d-block fa fa-twitter text-muted fa-lg ml-0 mx-4" />
+                                <Link href="/404">
+                                    <a>
+                                        <i className="d-block fa fa-facebook-official text-muted fa-lg mx-4" />
+                                    </a>
+                                </Link>
+                                <Link href="/404">
+                                    <a>
+                                        <i className="d-block fa fa-instagram text-muted fa-lg mx-4" />
+                                    </a>
+                                </Link>
+                                <Link href="/404">
+                                    <a>
+                                        <i className="d-block fa fa-twitter text-muted fa-lg ml-0 mx-4" />
+                                    </a>
+                                </Link>
                                 <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: "#12bbad" }} />
                                 <p className="mb-0 py-1">©2018 Pingendo All rights reserved</p>
                             </div>
