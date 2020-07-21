@@ -1,9 +1,6 @@
 import Layout from '../component/layout'
 import Link from 'next/link'
 
-// background
-// style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;"
-
 export default function Home() {
   return (
     <Layout>
@@ -17,8 +14,8 @@ export default function Home() {
                 <br />
                 <h1 className="display-3 mb-4">歡迎來到<br />協同學生意見平台</h1>
                 <p className="lead mb-5">這是一個專屬於協同人的論壇，請在這裡自由發表對學校、對課程等等的看法</p>
-                <Link href="/article/hot">
-                  <a className="btn btn-lg mx-1" style={{ borderColor: "#12bbad", color: "#12bbad" }}>熱門文章</a>
+                <Link href="/user/login">
+                  <a className="btn btn-lg mx-1" style={{ borderColor: "#12bbad", color: "#12bbad" }}>我要登入</a>
                 </Link>
                 <Link href="">
                   <a className="btn btn-lg mx-1" style={{ backgroundColor: "#12bbad", borderColor: "#12bbad" }}>我要註冊</a>
