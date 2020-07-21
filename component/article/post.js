@@ -22,7 +22,6 @@ export default function Post({ post }) {
                                 <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2" href="#">
                                     <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
                                 </a>
-                                <Comment />
                             </div>
                         </div>
                     </div>
