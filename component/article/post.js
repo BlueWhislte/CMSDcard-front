@@ -1,6 +1,6 @@
 import Comment from './comment'
 
-export default function Post() {
+export default function Post({ post }) {
     return (
         <div className="py-2">
             <div className="container">
@@ -9,13 +9,13 @@ export default function Post() {
                         <div className="card">
                             <div className="card-header">
                                 <div className="d-flex justify-content-between">
-                                    <div>leafoliage</div>
-                                    <div>2020.07.17-10:31</div>
+                                    <div>{post.authorName}</div>
+                                    <div>{convertTime(post.postTime)}</div>
                                 </div>
                             </div>
                             <div className="card-body">
-                                <h5>阿好煩喔</h5>
-                                <p className="mb-0">爛死了爛死了爛死了</p>
+                                <h5>{post.title}</h5>
+                                <p className="mb-0">{post.content}</p>
                                 <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1" href="#">
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                 </a>
@@ -30,4 +30,9 @@ export default function Post() {
             </div>
         </div>
     )
+}
+
+function convertTime(iso) {
+    let date = new Date(iso)
+    return date.toLocaleString()
 }

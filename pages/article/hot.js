@@ -1,7 +1,7 @@
 import Layout from '../../component/layout'
 import Post from '../../component/article/post'
 
-export default function Hot() {
+export default function Hot({ data }) {
     return (
         <Layout>
             <div className="py-3">
@@ -15,13 +15,23 @@ export default function Hot() {
             </div>
 
             <main>
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+                {
+                    data.map(post => (
+                        <Post post={post} key={post.title} />
+                    ))
+                }
             </main>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    const res = await fetch('http://localhost:6001/post/select/hot')
+    const data = await res.json()
+
+    return {
+        props: {
+            data,
+        }
+    }
 }
