@@ -16,10 +16,11 @@ export default function Post({ post }) {
                             <div className="card-body">
                                 <h5>{post.title}</h5>
                                 <p className="mb-0">{post.content}</p>
-                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1" href="#">
+                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{textDecoration: "none"}} href="#">
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
+                                    {post.likeIds.length}
                                 </a>
-                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2" href="#">
+                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2 text-warning" style={{textDecoration: "none"}} href="#">
                                     <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
                                 </a>
                             </div>
