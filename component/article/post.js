@@ -1,4 +1,4 @@
-import Comment from './comment'
+import Link from 'next/link'
 
 export default function Post({ post }) {
     return (
@@ -14,13 +14,17 @@ export default function Post({ post }) {
                                 </div>
                             </div>
                             <div className="card-body">
-                                <h5>{post.title}</h5>
-                                <p className="mb-0">{post.content}</p>
-                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{textDecoration: "none"}} href="#">
+                                <Link href={`/article/${post._id}`}>
+                                    <a style={{ textDecoration: "none", color: "#000000" }}>
+                                        <h5>{post.title}</h5>
+                                        <p className="mb-3">{post.content}</p>
+                                    </a>
+                                </Link>
+                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }}>
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                     {post.likeIds.length}
                                 </a>
-                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2 text-warning" style={{textDecoration: "none"}} href="#">
+                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }} href="#">
                                     <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
                                 </a>
                             </div>
@@ -35,4 +39,19 @@ export default function Post({ post }) {
 function convertTime(iso) {
     let date = new Date(iso)
     return date.toLocaleString()
+}
+
+async function postLike() {
+    return await fetch(`http://localhost:6001/post/like/5f0b0c0c9875a9f6b0ff6863`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({
+            userId: "5f0b0dd1a7e81d087c1245e9"
+        })
+    })
+        .then(res => { res.json() })
+        .then(json => console.log(json))
 }
