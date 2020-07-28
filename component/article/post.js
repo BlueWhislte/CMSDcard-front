@@ -1,6 +1,19 @@
 import Link from 'next/link'
 
 export default function Post({ post }) {
+
+    const postLike = async (userId) => {
+        return await fetch(`http://localhost:6001/post/like/${post._id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userId,
+            })
+        }).then(res => { res.json() })
+    }
+
     return (
         <div className="py-2">
             <div className="container">
@@ -20,7 +33,7 @@ export default function Post({ post }) {
                                         <p className="mb-3">{post.content}</p>
                                     </a>
                                 </Link>
-                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }}>
+                                <a id="like" className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }} onClick={() => postLike('5f0b0c0c9875a9f6b0ff6863')}>
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                     {post.likeIds.length}
                                 </a>
@@ -39,19 +52,4 @@ export default function Post({ post }) {
 function convertTime(iso) {
     let date = new Date(iso)
     return date.toLocaleString()
-}
-
-async function postLike() {
-    return await fetch(`http://localhost:6001/post/like/5f0b0c0c9875a9f6b0ff6863`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify({
-            userId: "5f0b0dd1a7e81d087c1245e9"
-        })
-    })
-        .then(res => { res.json() })
-        .then(json => console.log(json))
 }
