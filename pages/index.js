@@ -17,7 +17,7 @@ export default function Home() {
                 <Link href="/user/login">
                   <a className="btn btn-lg mx-1" style={{ borderColor: "#12bbad", color: "#12bbad" }}>我要登入</a>
                 </Link>
-                <Link href="">
+                <Link href="/user/register">
                   <a className="btn btn-lg mx-1" style={{ backgroundColor: "#12bbad", borderColor: "#12bbad" }}>我要註冊</a>
                 </Link>
                 <br />
