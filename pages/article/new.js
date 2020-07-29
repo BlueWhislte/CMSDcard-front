@@ -26,7 +26,7 @@ export default function New({ data }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:6001/post/select/hot')
+    const res = await fetch('http://localhost:6001/post/select/new')
     const data = await res.json()
 
     return {
