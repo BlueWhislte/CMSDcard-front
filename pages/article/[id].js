@@ -42,6 +42,9 @@ export default function Article({ article, comments }) {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-md-8">
+                            <button className="btn btn-secondary mb-4 py-0" onClick={() => router.back()}>
+                                <i className="fa fa-caret-left" aria-hidden="true"></i>
+                            </button>
                             <h3>{article.authorName}</h3>
                             <h6 className="text-muted">{convertTime(article.postTime)}</h6>
                             <hr />
