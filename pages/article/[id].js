@@ -46,15 +46,16 @@ export default function Article({ article, comments }) {
                             <h6 className="text-muted">{convertTime(article.postTime)}</h6>
                             <hr />
                             <h3>{article.title}</h3>
-                            <p>{article.content}</p><a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }}>
+                            <p>{article.content}</p>
+                            <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }}>
                                 <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                 {article.likeIds.length}
                             </a>
-                            <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2 text-warning" style={{ textDecoration: "none" }} href="#">
+                            <button className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2 text-warning" style={{ textDecoration: "none" }} disabled>
                                 <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
-                            </a>
+                            </button>
                             <hr />
-                            <Comment comments={comments} />
+                            <Comment comments={comments} postId={article._id} />
                         </div>
                     </div>
                 </div>

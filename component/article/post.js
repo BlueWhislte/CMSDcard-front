@@ -37,9 +37,11 @@ export default function Post({ post }) {
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                     {post.likeIds.length}
                                 </a>
-                                <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }} href="#">
-                                    <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
-                                </a>
+                                <Link href={`/article/${post._id}`}>
+                                    <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }}>
+                                        <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
