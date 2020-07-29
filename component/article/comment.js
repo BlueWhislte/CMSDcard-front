@@ -19,7 +19,7 @@ export default function Comment({ comments, postId }) {
             <form>
                 <div className="row">
                     <div className="col-md-11">
-                        <input id="form-comment" type="text" className="form-control" placeholder="留言" />
+                        <input id="form-comment" type="text" className="form-control" placeholder="留言" autoFocus/>
                     </div>
                     <button type="submit" className="btn btn-info" onClick={postComment}>留言</button>
                 </div>
