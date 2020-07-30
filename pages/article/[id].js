@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
+import Loading from '../../component/loading'
 import { convertTime } from '../../functions/utils'
 
 export default function Article({ article, comments }) {
@@ -9,30 +10,7 @@ export default function Article({ article, comments }) {
     if (router.isFallback) {
         return (
             <Layout>
-                <div class="py-5" >
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-1">
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Loading />
             </Layout>
         )
     }
