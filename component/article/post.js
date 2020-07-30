@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { convertTime } from '../../functions/utils'
 
 export default function Post({ post }) {
 
@@ -49,9 +50,4 @@ export default function Post({ post }) {
             </div>
         </div>
     )
-}
-
-function convertTime(iso) {
-    let date = new Date(iso)
-    return date.toLocaleString()
 }

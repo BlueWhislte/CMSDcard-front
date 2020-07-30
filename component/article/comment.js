@@ -1,3 +1,5 @@
+import { convertTime } from '../../functions/utils'
+
 export default function Comment({ comments, postId }) {
 
     const postComment = async () => {
@@ -38,9 +40,4 @@ export default function Comment({ comments, postId }) {
             </div>
         </div>
     )
-}
-
-function convertTime(iso) {
-    let date = new Date(iso)
-    return date.toLocaleString()
 }

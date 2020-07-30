@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
+import { convertTime } from '../../functions/utils'
 
 export default function Article({ article, comments }) {
     const router = useRouter()
@@ -93,9 +94,4 @@ export async function getStaticProps({ params }) {
             comments,
         }
     }
-}
-
-function convertTime(iso) {
-    let date = new Date(iso)
-    return date.toLocaleString()
 }
