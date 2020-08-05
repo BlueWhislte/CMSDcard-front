@@ -18,7 +18,10 @@ export default function Login() {
                 password: document.getElementById('form-pass').value
             })
         })
-            .then(res => { return res.json() })
+            .then(res => { 
+                if (res.ok) router.push('/article/hot')
+                return res.json() 
+            })
             .then(data => {
                 localStorage.clear()
                 localStorage.setItem('auth', data.accessToken)
