@@ -54,7 +54,7 @@ export async function getServerSideProps({ params }) {
     return {
         props: {
             article,
-            comments: []
+            comments
         }
     }
 }
