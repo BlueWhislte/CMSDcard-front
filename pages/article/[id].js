@@ -52,24 +52,17 @@ export default function Article({ article, comments }) {
     )
 }
 
-export async function getStaticPaths() {
-    return {
-        paths: [{ params: { id: '5f0d72d2e9a36c35686d933d' } }],
-        fallback: true,
-    }
-}
+export async function getServerSideProps({ params }) {
+    const article = await fetch(`http://localhost:6001/post/${params.id}`)
+        .then(res => res.json())
 
-export async function getStaticProps({ params }) {
-    const res = await fetch(`http://localhost:6001/post/${params.id}`)
-    const article = await res.json()
-
-    const comRes = await fetch(`http://localhost:6001/comment/post/${params.id}`)
-    const comments = await comRes.json()
+    const comments = await fetch(`http://localhost:6001/comment/post/${params.id}`)
+        .then(res => res.json())
 
     return {
         props: {
             article,
-            comments,
+            comments: []
         }
     }
 }
