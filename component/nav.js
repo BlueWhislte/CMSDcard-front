@@ -1,6 +1,13 @@
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 export default function Nav() {
+    const [token, setToken] = useState()
+
+    useEffect(() => {
+        setToken(localStorage.getItem('auth'))
+    })
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{backgroundColor: "#000000"}}>
             <div className="container">
@@ -36,16 +43,24 @@ export default function Nav() {
                             </Link>
                         </li>
                     </ul>
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <Link href="/user/register">
-                                <a className="nav-link">註冊</a>
-                            </Link>
-                        </li>
-                    </ul>
-                    <Link href="/user/login">
-                        <a className="btn navbar-btn ml-md-2" style={{ backgroundColor: "#12bbad" }}>登入</a>
-                    </Link>
+                    {token ? (
+                        <Link href="/user/login">
+                            <a className="btn navbar-btn ml-md-2" onClick={localStorage.clear()} style={{ backgroundColor: "#12bbad" }}>登出</a>
+                        </Link>
+                    ) : (
+                            <>
+                                <ul className="navbar-nav ml-auto">
+                                    <li className="nav-item">
+                                        <Link href="/user/register">
+                                            <a className="nav-link">註冊</a>
+                                        </Link>
+                                    </li>
+                                </ul>
+                                <Link href="/user/login">
+                                    <a className="btn navbar-btn ml-md-2" style={{ backgroundColor: "#12bbad" }}>登入</a>
+                                </Link>
+                            </>
+                        )}
                 </div>
             </div>
         </nav>
