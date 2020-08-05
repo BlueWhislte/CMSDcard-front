@@ -7,14 +7,6 @@ import { convertTime } from '../../functions/utils'
 export default function Article({ article, comments }) {
     const router = useRouter()
 
-    if (router.isFallback) {
-        return (
-            <Layout>
-                <Loading />
-            </Layout>
-        )
-    }
-
     return (
         <Layout>
             <div className="py-5">
