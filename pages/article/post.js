@@ -1,5 +1,5 @@
 import Layout from '../../component/layout'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 export default function Post() {
     const router = useRouter()
@@ -14,7 +14,7 @@ export default function Post() {
                 title: document.getElementById('form-title').value,
                 content: document.getElementById('form-content').value
             })
-        }).then(res => { 
+        }).then(res => {
             if (res.ok) router.push(`/article/${res.body._id}`)
         })
     }
@@ -40,7 +40,7 @@ export default function Post() {
                                         <textarea className="form-control" id="form-content" rows="6" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <button type="button" className="btn" style={{background:"#12bbad", color:"#FFFFFF"}} onClick={postArticle}>潑文</button>
+                                <button type="button" className="btn" style={{ background: "#12bbad", color: "#FFFFFF" }} onClick={postArticle}>潑文</button>
                             </form>
                         </div>
                     </div>
