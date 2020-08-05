@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
 import Loading from '../../component/loading'
-import { convertTime } from '../../functions/utils'
+import { convertFullTime } from '../../functions/utils'
 
 export default function Article({ article, comments }) {
     const router = useRouter()
@@ -17,7 +17,7 @@ export default function Article({ article, comments }) {
                                 <i className="fa fa-caret-left" aria-hidden="true"></i>
                             </button>
                             <h3>{article.authorName}</h3>
-                            <h6 className="text-muted">{convertTime(article.postTime)}</h6>
+                            <h6 className="text-muted">{convertFullTime(article.postTime)}</h6>
                             <hr />
                             <h3>{article.title}</h3>
                             <p>{article.content}</p>

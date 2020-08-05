@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { convertTime } from '../../functions/utils'
+import { convertDateOnly } from '../../functions/utils'
 
 export default function Post({ post }) {
 
@@ -21,7 +21,7 @@ export default function Post({ post }) {
                             <div className="card-header">
                                 <div className="d-flex justify-content-between">
                                     <div>{post.authorName}</div>
-                                    <div>{convertTime(post.postTime)}</div>
+                                    <div>{convertDateOnly(post.postTime)}</div>
                                 </div>
                             </div>
                             <div className="card-body">
