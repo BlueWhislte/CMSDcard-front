@@ -7,13 +7,13 @@ export default function Comment({ comments, postId }) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
             },
             body: JSON.stringify({
-                authorId: '5f0b0c0c9875a9f6b0ff6863',
-                targetPost: postId,
+                authorId: '5f28c3d328666f21bca62f7e',
                 content: document.getElementById('form-comment').value
             })
-        }).then(res => { res.json() })
+        }).then(res => res.json())
     }
 
     return (
@@ -21,9 +21,9 @@ export default function Comment({ comments, postId }) {
             <form>
                 <div className="row">
                     <div className="col-md-11">
-                        <input id="form-comment" type="text" className="form-control" placeholder="留言" autoFocus/>
+                        <input id="form-comment" type="text" className="form-control" placeholder="留言" autoFocus />
                     </div>
-                    <button type="submit" className="btn btn-info" onClick={postComment}>留言</button>
+                    <button type="button" className="btn btn-info" onClick={postComment}>留言</button>
                 </div>
             </form>
             <br />
