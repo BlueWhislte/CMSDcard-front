@@ -11,8 +11,8 @@ export default function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{backgroundColor: "#000000"}}>
             <div className="container">
-                <Link href="/">
-                    <a className="navbar-brand" href="#">
+                <Link href="">
+                    <a className="navbar-brand">
                         <i className="fa d-inline fa-commenting fa-lg"></i>
                     </a>
                 </Link>
