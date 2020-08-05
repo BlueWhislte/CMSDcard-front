@@ -3,15 +3,12 @@ import { convertTime } from '../../functions/utils'
 
 export default function Post({ post }) {
 
-    const postLike = async (userId) => {
+    const postLike = async () => {
         return await fetch(`http://localhost:6001/post/like/${post._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                userId,
-            })
+            }
         }).then(res => { res.json() })
     }
 
