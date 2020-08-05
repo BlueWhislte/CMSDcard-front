@@ -6,15 +6,18 @@ export default function Login() {
         return await fetch('http://localhost:6001/user/login', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer`
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 email: document.getElementById('form-email').value,
                 password: document.getElementById('form-pass').value
             })
         })
-            .then(res => { res.json() })
+            .then(res => { return res.json() })
+            .then(data => {
+                localStorage.clear()
+                localStorage.setItem('auth', data.accessToken)
+            })
             .catch(err => { console.log(err) })
     }
 
@@ -38,7 +41,7 @@ export default function Login() {
                                         <a href="#">顯示密碼</a>
                                     </small>
                                 </div>
-                                <button type="submit" className="btn" onClick={postLogin} style={{ background: "#12bbad", color: "#ffffff" }}>登入</button>
+                                <button type="button" className="btn" onClick={postLogin} style={{ background: "#12bbad", color: "#ffffff" }}>登入</button>
                             </form>
                         </div>
                     </div>
