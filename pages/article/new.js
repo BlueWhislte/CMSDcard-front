@@ -15,12 +15,29 @@ export default function New({ data }) {
             </div>
 
             <main>
-                {
+                {data ?
                     data.map(post => (
                         <Post post={post} key={post.title} />
-                    ))
+                    )) : (
+                        <>
+                            <br />
+                            <br />
+                            <br />
+                            <p>目前沒有文章!!</p>
+                            <br />
+                            <br />
+                            <br />
+                        </>
+                    )
                 }
             </main>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </Layout>
     )
 }
