@@ -1,6 +1,8 @@
 import Layout from '../../component/layout'
+import {useRouter} from 'next/router'
 
 export default function Post() {
+    const router = useRouter()
 
     const postArticle = async () => {
         return await fetch('http://localhost:6001/post', {
@@ -9,11 +11,12 @@ export default function Post() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                authorId: '5f0b0c0c9875a9f6b0ff6863',
                 title: document.getElementById('form-title').value,
                 content: document.getElementById('form-content').value
             })
-        }).then(res => { res.json() })
+        }).then(res => { 
+            if (res.ok) router.push(`/article/${res.body._id}`)
+        })
     }
 
     return (
@@ -37,7 +40,7 @@ export default function Post() {
                                         <textarea className="form-control" id="form-content" rows="6" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" className="btn" style={{background:"#12bbad", color:"#FFFFFF"}} onClick={postArticle}>潑文</button>
+                                <button type="button" className="btn" style={{background:"#12bbad", color:"#FFFFFF"}} onClick={postArticle}>潑文</button>
                             </form>
                         </div>
                     </div>
