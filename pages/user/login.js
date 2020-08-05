@@ -1,6 +1,11 @@
 import Layout from '../../component/layout'
+import { useRouter } from 'next/router'
 
 export default function Login() {
+    const router = useRouter()
+    const token = localStorage.getItem('auth')
+
+    if (token) router.push('/article/hot')
 
     const postLogin = async () => {
         return await fetch('http://localhost:6001/user/login', {
