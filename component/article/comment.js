@@ -3,7 +3,7 @@ import { convertTime } from '../../functions/utils'
 export default function Comment({ comments, postId }) {
 
     const postComment = async () => {
-        return await fetch('http://localhost:6001/comment', {
+        return await fetch(`http://localhost:6001/comment/${postId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
