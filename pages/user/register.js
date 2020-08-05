@@ -1,9 +1,14 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 
 export default function Register() {
     const router = useRouter()
-    const token = localStorage.getItem('auth')
+    const [token, setToken] = useState()
+
+    useEffect(() => {
+        setToken(localStorage.getItem('auth'))
+    })
 
     if (token) router.push('/article/hot')
 

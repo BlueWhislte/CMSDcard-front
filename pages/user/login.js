@@ -1,9 +1,14 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 
 export default function Login() {
     const router = useRouter()
-    const token = localStorage.getItem('auth')
+    const [token, setToken] = useState()
+
+    useEffect(() => {
+        setToken(localStorage.getItem('auth'))
+    })
 
     if (token) router.push('/article/hot')
 
@@ -18,9 +23,9 @@ export default function Login() {
                 password: document.getElementById('form-pass').value
             })
         })
-            .then(res => { 
+            .then(res => {
                 if (res.ok) router.push('/article/hot')
-                return res.json() 
+                return res.json()
             })
             .then(data => {
                 localStorage.clear()
