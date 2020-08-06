@@ -9,7 +9,7 @@ export default function Nav() {
     })
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{backgroundColor: "#000000"}}>
+        <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: "#000000" }}>
             <div className="container">
                 <Link href="">
                     <a className="navbar-brand">
@@ -44,9 +44,18 @@ export default function Nav() {
                         </li>
                     </ul>
                     {token ? (
-                        <Link href="/user/login">
-                            <a className="btn navbar-btn ml-md-2" onClick={localStorage.clear()} style={{ backgroundColor: "#12bbad" }}>登出</a>
-                        </Link>
+                        <>
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <Link href="/user/register">
+                                        <a className="nav-link">我的帳號</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                            <Link href="/user/login">
+                                <a className="btn navbar-btn ml-md-2" onClick={localStorage.clear()} style={{ backgroundColor: "#12bbad" }}>登出</a>
+                            </Link>
+                        </>
                     ) : (
                             <>
                                 <ul className="navbar-nav ml-auto">
