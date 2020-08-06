@@ -49,7 +49,6 @@ export function convertDateOnly(iso) {
 
     let month = parseMonth(date)
     let day = parseDay(date)
-    date.getMi
 
     return date.getFullYear() + '-' + month + '-' + day
 }
