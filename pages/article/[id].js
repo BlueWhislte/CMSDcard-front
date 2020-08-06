@@ -4,7 +4,7 @@ import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
 import { convertFullTime } from '../../functions/utils'
 
-export default function Article({ params }) {
+export default function Article() {
     const router = useRouter()
     const [article, setArticle] = useState({})
     const [comments, setComments] = useState([])
@@ -31,6 +31,16 @@ export default function Article({ params }) {
         fetchCommentsData()
     })
 
+    const postLike = async () => {
+        return await fetch(`http://localhost:6001/post/like/${article._id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+            }
+        }).then(res => { res.json() })
+    }
+
     return (
         <Layout>
             <div className="py-5">
@@ -45,7 +55,7 @@ export default function Article({ params }) {
                             <hr />
                             <h3>{article.title}</h3>
                             <p>{article.content}</p>
-                            <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }}>
+                            <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" onClick={postLike} style={{ textDecoration: "none" }}>
                                 <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                 {article.likeNum}
                             </a>

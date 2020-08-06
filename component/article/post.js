@@ -8,6 +8,7 @@ export default function Post({ post }) {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
+                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
             }
         }).then(res => { res.json() })
     }
@@ -27,7 +28,7 @@ export default function Post({ post }) {
                             <div className="card-body">
                                         <h5>{post.title}</h5>
                                         <p className="mb-3">{post.content}</p>
-                                <a id="like" className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }} onClick={() => postLike('5f0b0c0c9875a9f6b0ff6863')}>
+                                <a id="like" className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }} onClick={postLike}>
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                     {post.likeIds.length}
                                 </a>
