@@ -1,11 +1,35 @@
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
-import Loading from '../../component/loading'
 import { convertFullTime } from '../../functions/utils'
 
-export default function Article({ article, comments }) {
+export default function Article({ params }) {
     const router = useRouter()
+    const [article, setArticle] = useState({})
+    const [comments, setComments] = useState([])
+
+    useEffect(() => {
+        async function fetchArticleData() {
+            const articleData = await fetch(`http://localhost:6001/post/${router.query.id}`, {
+                headers: {
+                    // 'Authorization': localStorage.getItem('auth')
+                }
+            })
+            setArticle(await articleData.json())
+        }
+        async function fetchCommentsData() {
+            const commentsData = await fetch(`http://localhost:6001/comment/post/${router.query.id}`, {
+                headers: {
+                    // 'Authorization': localStorage.getItem('auth')
+                }
+            })
+            setComments(await commentsData.json())
+        }
+
+        fetchArticleData()
+        fetchCommentsData()
+    })
 
     return (
         <Layout>
@@ -23,13 +47,13 @@ export default function Article({ article, comments }) {
                             <p>{article.content}</p>
                             <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }}>
                                 <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
-                                {article.likeIds.length}
+                                {article.likeNum}
                             </a>
                             <button className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2 text-warning" style={{ textDecoration: "none" }} disabled>
                                 <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
                             </button>
                             <hr />
-                            <Comment comments={comments} postId={article._id} />
+                            <Comment comments={Array.from(comments)} postId={article._id} />
                         </div>
                     </div>
                 </div>
@@ -42,19 +66,4 @@ export default function Article({ article, comments }) {
             <br />
         </Layout>
     )
-}
-
-export async function getServerSideProps({ params }) {
-    const article = await fetch(`http://localhost:6001/post/${params.id}`)
-        .then(res => res.json())
-
-    const comments = await fetch(`http://localhost:6001/comment/post/${params.id}`)
-        .then(res => res.json())
-
-    return {
-        props: {
-            article,
-            comments
-        }
-    }
 }
