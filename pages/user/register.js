@@ -23,9 +23,10 @@ export default function Register() {
                 email: document.getElementById('form-email').value
             })
         })
-            .then(res => { 
+            .then(async (res) => {
                 if (res.ok) router.push('/user/login')
-             })
+                else window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+            })
             .catch(err => { console.log(err) })
     }
 
@@ -51,7 +52,7 @@ export default function Register() {
                                     <label htmlFor="form20">密碼</label>
                                     <p>將由系統生成暫時密碼，並傳送至您的電子郵件信箱。</p>
                                 </div>
-                                <button type="button" className="btn mt-1" style={{ background:"#12bbad", color:"#ffffff" }} onClick={postRegister}>註冊</button>
+                                <button type="button" className="btn mt-1" style={{ background: "#12bbad", color: "#ffffff" }} onClick={postRegister}>註冊</button>
                             </form>
                         </div>
                     </div>
