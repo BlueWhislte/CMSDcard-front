@@ -9,7 +9,7 @@ export default function New() {
         async function fetchData() {
             const res = await fetch('http://localhost:6001/post/select/new', {
                 headers: {
-                    // 'Authorization': localStorage.getItem('auth')
+                    // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
             setData(await res.json())

@@ -13,7 +13,7 @@ export default function Article({ params }) {
         async function fetchArticleData() {
             const articleData = await fetch(`http://localhost:6001/post/${router.query.id}`, {
                 headers: {
-                    // 'Authorization': localStorage.getItem('auth')
+                    // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
             setArticle(await articleData.json())
@@ -21,7 +21,7 @@ export default function Article({ params }) {
         async function fetchCommentsData() {
             const commentsData = await fetch(`http://localhost:6001/comment/post/${router.query.id}`, {
                 headers: {
-                    // 'Authorization': localStorage.getItem('auth')
+                    // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
             setComments(await commentsData.json())
