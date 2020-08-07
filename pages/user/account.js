@@ -37,6 +37,7 @@ export default function Account() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
+                            <h1>我的帳號</h1>
                             <h3>姓名: {user.name}</h3>
                             <h3>電子郵件: {user.email}</h3>
                             <h3>密碼</h3>
