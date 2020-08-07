@@ -1,18 +1,23 @@
 import Layout from '../../component/layout'
 import Post from '../../component/article/post'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Hot() {
+    const router = useRouter()
     const [data, setData] = useState()
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch('http://localhost:6001/post/select/hot', {
+            const data = await fetch('http://localhost:6001/post/select/hot', {
                 headers: {
                     // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-            setData(await res.json())
+                .then(res => {
+                    if (res.status == 401 || res.status == 403) router.push('/user/login')
+                })
+            setData(await data.json())
         }
         fetchData()
     })

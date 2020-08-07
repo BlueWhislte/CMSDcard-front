@@ -16,6 +16,9 @@ export default function Article() {
                     // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
+                .then(res => {
+                    if (res.status == 401 || res.status == 403) router.push('/user/login')
+                })
             setArticle(await articleData.json())
         }
         async function fetchCommentsData() {

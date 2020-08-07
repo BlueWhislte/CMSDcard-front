@@ -6,19 +6,22 @@ export default function Account() {
 
     useEffect(() => {
         async function getUserData() {
-            const userData = await fetch('http://localhost:6001/user', {
+            const data = await fetch('http://localhost:6001/user', {
                 headers: {
                     // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
-            }).then(res => res.json())
+            })
+                .then(res => {
+                    if (res.status == 401 || res.status == 403) router.push('/user/login')
+                })
 
-            setUser(userData)
+            setUser(await data.json())
         }
 
         getUserData()
     })
 
-    const putUser = async ()=>{
+    const putUser = async () => {
         return await fetch('http://localhost:6001/user', {
             method: 'PUT',
             headers: {
@@ -27,7 +30,7 @@ export default function Account() {
             },
             body: JSON.stringify({
                 password: document.getElementById('form-password').value
-            }) 
+            })
         }).then(res => res.json())
     }
 
