@@ -47,9 +47,9 @@ export default function Login() {
                                 </div>
                                 <div className="form-group mb-3">
                                     <input type="password" className="form-control" placeholder="密碼" id="form-pass" />
-                                    <small className="form-text text-muted text-right mt-2">
+                                    {/* <small className="form-text text-muted text-right mt-2">
                                         <a href="#">顯示密碼</a>
-                                    </small>
+                                    </small> */}
                                 </div>
                                 <button type="button" className="btn" onClick={postLogin} style={{ background: "#12bbad", color: "#ffffff" }}>登入</button>
                             </form>
