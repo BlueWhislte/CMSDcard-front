@@ -16,10 +16,8 @@ export default function Article() {
                     // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-                .then(res => {
-                    if (res.status == 401 || res.status == 403) router.push('/user/login')
-                })
-            setArticle(await articleData.json())
+            if (articleData.status == 401 || articleData.status == 403) router.push('/user/login')
+            else setArticle(await articleData.json())
         }
         async function fetchCommentsData() {
             const commentsData = await fetch(`http://localhost:6001/comment/post/${router.query.id}`, {

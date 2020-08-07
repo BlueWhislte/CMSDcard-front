@@ -11,11 +11,8 @@ export default function Account() {
                     // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-                .then(res => {
-                    if (res.status == 401 || res.status == 403) router.push('/user/login')
-                })
-
-            setUser(await data.json())
+            if (data.status == 401 || data.status == 403) router.push('/user/login')
+            else setUser(await data.json())
         }
 
         getUserData()
