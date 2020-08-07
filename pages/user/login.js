@@ -1,16 +1,14 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 
 export default function Login() {
     const router = useRouter()
-    const [token, setToken] = useState()
 
     useEffect(() => {
-        setToken(localStorage.getItem('auth'))
+        if (localStorage.getItem('auth')) router.push('/article/hot')
     })
 
-    if (token) router.push('/article/hot')
 
     const postLogin = async () => {
         return await fetch('http://localhost:6001/user/login', {
@@ -25,7 +23,6 @@ export default function Login() {
         })
             .then(res => res.json())
             .then(data => {
-                localStorage.clear()
                 localStorage.setItem('auth', data.accessToken)
             })
             .catch(err => { console.log(err) })
