@@ -40,13 +40,13 @@ export default function Register() {
                             <p className="mb-3 mt-2">註冊並享受言論自由吧!</p>
                             <form className="text-left">
                                 <div className="form-group">
-                                    <label htmlFor="form16">使用者名稱</label>
-                                    <small className="ml-2 text-muted"> ex: mark_the_handsome、fanny.weng、協同金城武、真難溶於水...</small>
-                                    <input type="text" className="form-control" id="form-name" placeholder="mark_the_handsome" />
+                                    <label htmlFor="form16">暱稱</label>
+                                    <small className="ml-2 text-muted"> ex:協同金城武、真難溶於水...</small>
+                                    <input type="text" className="form-control" id="form-name" placeholder="最好別人都不要認出你" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="form18">電子郵件</label>
-                                    <input type="email" className="form-control" id="form-email" placeholder="mark@gmail.com" />
+                                    <input type="email" className="form-control" id="form-email" placeholder="mark_haung@gmail.com" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="form20">密碼</label>
