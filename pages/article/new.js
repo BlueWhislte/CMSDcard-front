@@ -35,7 +35,7 @@ export default function New() {
             <main>
                 {data ?
                     data.map(post => (
-                        <Post post={post} key={post.title} />
+                        <Post post={post} key={post._id} />
                     )) : (
                         <>
                             <br />
