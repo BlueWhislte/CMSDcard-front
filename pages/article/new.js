@@ -18,7 +18,7 @@ export default function New() {
             else setData(await data.json())
         }
         fetchData()
-    })
+    }, [data])
 
     return (
         <Layout>
