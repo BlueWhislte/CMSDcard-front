@@ -16,7 +16,7 @@ export default function Post() {
                 content: document.getElementById('form-content').value
             })
         }).then(res => {
-            if (res.ok) router.push(`/article/${res.body._id}`)
+            if (res.ok) router.push(`/article/new`)
         })
     }
 
