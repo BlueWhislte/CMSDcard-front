@@ -7,7 +7,7 @@ export default function Comment({ comments, postId }) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                'Authorization': `Bearer ${localStorage.getItem('auth')}`
             },
             body: JSON.stringify({
                 authorId: '5f28c3d328666f21bca62f7e',

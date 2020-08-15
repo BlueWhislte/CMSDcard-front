@@ -8,7 +8,7 @@ export default function Post({ post }) {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                'Authorization': `Bearer ${localStorage.getItem('auth')}`
             }
         }).then(res => { res.json() })
     }

@@ -11,18 +11,20 @@ export default function Article() {
 
     useEffect(() => {
         async function fetchArticleData() {
-            const articleData = await fetch(`http://localhost:6001/post/${router.query.id}`, {
+            const url = 'http://localhost:6001/post/' + router.query.id
+            const articleData = await fetch(url, {
                 headers: {
-                    // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
             if (articleData.status == 401 || articleData.status == 403) router.push('/user/login')
             else setArticle(await articleData.json())
         }
         async function fetchCommentsData() {
-            const commentsData = await fetch(`http://localhost:6001/comment/post/${router.query.id}`, {
+            const url = 'http://localhost:6001/comment/post/' + router.query.id
+            const commentsData = await fetch(url, {
                 headers: {
-                    // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
             setComments(await commentsData.json())
@@ -33,11 +35,11 @@ export default function Article() {
     })
 
     const postLike = async () => {
-        return await fetch(`http://localhost:6001/post/like/${article._id}`, {
+        return await fetch(`http://localhost:6001/post/like/${router.query.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                'Authorization': `Bearer ${localStorage.getItem('auth')}`
             }
         }).then(res => { res.json() })
     }
