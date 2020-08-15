@@ -31,7 +31,7 @@ export default function Comment({ comments, postId }) {
                 {comments.map(comment => (
                     <div className="list-group-item list-group-item-action flex-column align-items-start" key={comment._id}>
                         <div className="d-flex w-100 justify-content-between">
-                            <h6 className="mb-1">{comment.authorName}</h6>
+                            {/* <h6 className="mb-1">{comment.authorName}</h6> */}
                             <small className="text-muted">{convertBriefTime(comment.postTime)}</small>
                         </div>
                         <p className="mb-0">{comment.content}</p>
