@@ -34,7 +34,7 @@ export default function Article() {
             fetchArticleData()
             fetchCommentsData()
         }
-    }, [router.query.id]);
+    }, [router.query.id, article, comments]);
 
     const postLike = async () => {
         return await fetch(`http://localhost:6001/post/like/${router.query.id}`, {
