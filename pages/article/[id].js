@@ -20,6 +20,7 @@ export default function Article() {
                     }
                 })
                 if (articleData.status == 401 || articleData.status == 403) router.push('/user/login')
+                else if (articleData.status == 404) router.push('/404')
                 else setArticle(await articleData.json())
             }
             async function fetchCommentsData() {
