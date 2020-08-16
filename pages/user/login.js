@@ -30,7 +30,7 @@ export default function Login() {
 
     return (
         <Layout>
-            <div className="py-5 text-center" style={{ backgroundImage: "url('https://static.pingendo.com/cover-bubble-dark.svg')", backgroundSize: "cover" }} >
+            <div className="py-5 text-center" style={{ backgroundImage: "url('https://static.pingendo.com/cover-bubble-dark.svg')", backgroundSize: "cover" }} SameSite="None" >
                 <div className="container">
                     <br />
                     <br />
