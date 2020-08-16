@@ -28,19 +28,13 @@ export default function Layout({ children }) {
                         <div className="row">
                             <div className="col-md-12 text-center d-md-flex align-items-center">
                                 <Link href="/404">
-                                    <a>
-                                        <i className="d-block fa fa-facebook-official text-muted fa-lg mx-4" />
-                                    </a>
+                                    <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>關於我們</a>
                                 </Link>
                                 <Link href="/404">
-                                    <a>
-                                        <i className="d-block fa fa-instagram text-muted fa-lg mx-4" />
-                                    </a>
+                                    <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>聯絡我們</a>
                                 </Link>
                                 <Link href="/404">
-                                    <a>
-                                        <i className="d-block fa fa-twitter text-muted fa-lg ml-0 mx-4" />
-                                    </a>
+                                    <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>部落格</a>
                                 </Link>
                                 <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: "#12bbad" }} />
                                 <p className="mb-0 py-1">©2020 CMSForum all rights reserved</p>
