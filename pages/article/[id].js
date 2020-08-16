@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
+import Loading from '../../component/loading'
 import { convertFullTime } from '../../functions/utils'
 
 export default function Article() {
@@ -78,11 +79,7 @@ export default function Article() {
                                             </button>
                                             <hr />
                                             <Comment comments={Array.from(comments || [])} postId={article._id} />
-                                        </> : <div className="text-center">
-                                                <div className="spinner-border" role="status">
-                                                    <span className="sr-only">Loading...</span>
-                                                </div>
-                                            </div>
+                                        </> : <Loading />
                                     }
                                 </div>
                             </div>

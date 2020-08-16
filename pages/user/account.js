@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Layout from '../../component/layout'
+import Loading from '../../component/loading'
 
 export default function Account() {
     const [user, setUser] = useState()
@@ -48,11 +49,7 @@ export default function Account() {
                         </div>
                     </div>
                 </div> : <>
-                    <div className="text-center">
-                        <div className="spinner-border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </div>
-                    </div>
+                    <Loading />
                 </>}
         </Layout>
     )

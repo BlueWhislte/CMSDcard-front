@@ -1,5 +1,6 @@
 import Layout from '../../component/layout'
 import Post from '../../component/article/post'
+import Loading from '../../component/loading'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
@@ -37,23 +38,7 @@ export default function Hot() {
                     data.map(post => (
                         <Post post={post} key={post._id} />
                     )) : (
-                        <>
-                            <br />
-                            <br />
-                            <br />
-                            <div className="py-3">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-md-12">
-                                            <p className="text-center">目前沒有文章</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br />
-                            <br />
-                            <br />
-                        </>
+                        <Loading />
                     )
                 }
             </main>
