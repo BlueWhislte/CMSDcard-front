@@ -47,13 +47,13 @@ export default function Nav() {
                         <>
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <Link href="/user/register">
+                                    <Link href="/user/account">
                                         <a className="nav-link">我的帳號</a>
                                     </Link>
                                 </li>
                             </ul>
                             <Link href="/user/login">
-                                <a className="btn navbar-btn ml-md-2" onClick={localStorage.clear} style={{ backgroundColor: "#12bbad" }}>登出</a>
+                                <a className="btn navbar-btn ml-md-2" onClick={() => { localStorage.removeItem('auth') }} style={{ backgroundColor: "#12bbad" }}>登出</a>
                             </Link>
                         </>
                     ) : (
