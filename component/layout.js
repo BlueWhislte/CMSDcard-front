@@ -43,7 +43,7 @@ export default function Layout({ children }) {
                                     </a>
                                 </Link>
                                 <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: "#12bbad" }} />
-                                <p className="mb-0 py-1">©2018 Pingendo All rights reserved</p>
+                                <p className="mb-0 py-1">©2020 CMSForum all rights reserved</p>
                             </div>
                         </div>
                     </div>
