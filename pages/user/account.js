@@ -8,7 +8,7 @@ export default function Account() {
         async function getUserData() {
             const data = await fetch('http://localhost:6001/user', {
                 headers: {
-                    // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
             if (data.status == 401 || data.status == 403) router.push('/user/login')
@@ -16,14 +16,14 @@ export default function Account() {
         }
 
         getUserData()
-    })
+    }, [])
 
     const putUser = async () => {
         return await fetch('http://localhost:6001/user', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                // 'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                'Authorization': `Bearer ${localStorage.getItem('auth')}`
             },
             body: JSON.stringify({
                 password: document.getElementById('form-password').value
@@ -33,20 +33,27 @@ export default function Account() {
 
     return (
         <Layout>
-            <div className="py-3">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1>我的帳號</h1>
-                            <h3>姓名: {user.name}</h3>
-                            <h3>電子郵件: {user.email}</h3>
-                            <h3>密碼</h3>
-                            <input type="text" className="form-control" id="form-password" placeholder="新密碼" />
-                            <button type="button" className="btn" style={{ background: "#12bbad", color: "#FFFFFF" }} onClick={putUser}>更改密碼</button>
+            {user ?
+                <div className="py-3">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h1>我的帳號</h1>
+                                <h3>姓名: {user.name}</h3>
+                                <h3>電子郵件: {user.email}</h3>
+                                <h3>密碼</h3>
+                                <input type="text" className="form-control" id="form-password" placeholder="新密碼" />
+                                <button type="button" className="btn" style={{ background: "#12bbad", color: "#FFFFFF" }} onClick={putUser}>更改密碼</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> : <>
+                    <div className="text-center">
+                        <div className="spinner-border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </>}
         </Layout>
     )
 }
