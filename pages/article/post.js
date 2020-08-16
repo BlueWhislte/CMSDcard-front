@@ -1,8 +1,13 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 export default function Post() {
     const router = useRouter()
+
+    useEffect(()=>{
+        if (!localStorage.getItem('auth')) router.push('/user/login')
+    }, [])
 
     const postArticle = async () => {
         return await fetch('http://localhost:6001/post', {

@@ -28,7 +28,8 @@ export default function Article() {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
                     }
                 })
-                setComments(await commentsData.json())
+                if (commentsData.status == 401 || commentsData.status == 403) router.push('/user/login')
+                else setComments(await commentsData.json())
             }
 
             fetchArticleData()
