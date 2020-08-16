@@ -24,6 +24,7 @@ export default function Login() {
             .then(res => res.json())
             .then(data => {
                 localStorage.setItem('auth', data.accessToken)
+                router.reload()
             })
             .catch(err => { console.log(err) })
     }
