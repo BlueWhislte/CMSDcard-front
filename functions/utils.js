@@ -27,7 +27,6 @@ export function convertBriefTime(iso) {
     let milisec = new Date(iso).getTime()
     let ms = new Date().getTime() - milisec
 
-    let ago = ' ago'
     let oneMinute = 60000
     let oneHour = 3600000
     let oneDay = 86400000
@@ -35,13 +34,13 @@ export function convertBriefTime(iso) {
     let oneMonth = 2629800000
     let oneYear = 31557600000
 
-    if (ms < oneMinute) return 'just now'
-    else if (ms < oneHour) return '' + Math.round(ms / oneMinute) + ' minutes' + ago
-    else if (ms < oneDay) return '' + Math.round(ms / oneHour) + ' hours' + ago
-    else if (ms < oneWeek) return '' + Math.round(ms / oneDay) + ' days' + ago
-    else if (ms < oneMonth) return '' + Math.round(ms / oneWeek) + ' weeks' + ago
-    else if (ms < oneYear) return '' + Math.round(ms / oneWeek) + ' months' + ago
-    else return '' + Math.round(ms % oneYear) + ' years' + ago
+    if (ms < oneMinute) return '剛剛'
+    else if (ms < oneHour) return '' + Math.round(ms / oneMinute) + '分鐘前'
+    else if (ms < oneDay) return '' + Math.round(ms / oneHour) + '小時前'
+    else if (ms < oneWeek) return '' + Math.round(ms / oneDay) + '天前'
+    else if (ms < oneMonth) return '' + Math.round(ms / oneWeek) + '週前'
+    else if (ms < oneYear) return '' + Math.round(ms / oneWeek) + '個月前'
+    else return '' + Math.round(ms % oneYear) + '年前'
 }
 
 export function convertDateOnly(iso) {
