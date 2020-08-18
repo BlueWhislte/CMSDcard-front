@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     return (
         <div>
             <Head>
-                <title>CMS Forum</title>
+                <title>協同學生論壇 CMS Forum</title>
                 {/* <link rel="icon" href="/favicon.ico" /> */}
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />

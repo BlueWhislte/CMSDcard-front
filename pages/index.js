@@ -12,7 +12,7 @@ export default function Home() {
                 <br />
                 <br />
                 <br />
-                <h1 className="display-3 mb-4">歡迎來到<br />協同學生意見平台</h1>
+                <h1 className="display-3 mb-4">歡迎來到<br />協同學生論壇</h1>
                 <p className="lead mb-5">這是一個專屬於協同人的論壇，請在這裡自由發表對學校、對課程等等的看法</p>
                 <Link href="/user/login">
                   <a className="btn btn-lg mx-1" style={{ borderColor: "#12bbad", color: "#12bbad" }}>我要登入</a>

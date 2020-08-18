@@ -4,7 +4,7 @@ export default function Top() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1>協同中學學生意見平台 CMS-Forum</h1>
+                        <h1>協同學生論壇 CMS Forum</h1>
                     </div>
                 </div>
             </div>
