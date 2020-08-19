@@ -35,12 +35,12 @@ export function convertBriefTime(iso) {
     let oneYear = 31557600000
 
     if (ms < oneMinute) return '剛剛'
-    else if (ms < oneHour) return '' + Math.round(ms / oneMinute) + '分鐘前'
-    else if (ms < oneDay) return '' + Math.round(ms / oneHour) + '小時前'
-    else if (ms < oneWeek) return '' + Math.round(ms / oneDay) + '天前'
-    else if (ms < oneMonth) return '' + Math.round(ms / oneWeek) + '週前'
-    else if (ms < oneYear) return '' + Math.round(ms / oneWeek) + '個月前'
-    else return '' + Math.round(ms % oneYear) + '年前'
+    else if (ms < oneHour) return '' + Math.floor(ms / oneMinute) + '分鐘前'
+    else if (ms < oneDay) return '' + Math.floor(ms / oneHour) + '小時前'
+    else if (ms < oneWeek) return '' + Math.floor(ms / oneDay) + '天前'
+    else if (ms < oneMonth) return '' + Math.floor(ms / oneWeek) + '週前'
+    else if (ms < oneYear) return '' + Math.floor(ms / oneWeek) + '個月前'
+    else return '' + Math.floor(ms % oneYear) + '年前'
 }
 
 export function convertDateOnly(iso) {
