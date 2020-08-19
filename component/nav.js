@@ -11,11 +11,9 @@ export default function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: "#000000" }}>
             <div className="container">
-                <Link href="">
-                    <a className="navbar-brand">
+                    <span className="navbar-brand">
                         <i className="fa d-inline fa-commenting fa-lg"></i>
-                    </a>
-                </Link>
+                    </span>
                 <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                     data-target="#navbar11">
                     <span className="navbar-toggler-icon"></span>
