@@ -17,7 +17,7 @@ export default function Account() {
             else setUser(await data.json())
         }
 
-        getUserData()
+        setInterval(getUserData, 1000)
     }, [])
 
     const putUserPassword = async () => {

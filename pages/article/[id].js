@@ -34,8 +34,8 @@ export default function Article() {
                 else setComments(await commentsData.json())
             }
 
-            fetchArticleData()
-            fetchCommentsData()
+            setInterval(fetchArticleData, 1000)
+            setInterval(fetchCommentsData, 1000)
         }
     }, [router.query.id]);
 

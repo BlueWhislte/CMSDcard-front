@@ -18,7 +18,7 @@ export default function Hot() {
             if (data.status == 401 || data.status == 403) router.push('/user/login')
             else setData(await data.json())
         }
-        fetchData()
+        setInterval(fetchData, 1000)
     }, [])
 
     return (
