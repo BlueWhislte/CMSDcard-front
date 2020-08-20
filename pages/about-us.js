@@ -31,7 +31,7 @@ export default function AboutUs() {
                         <div className="p-0 order-2 order-lg-1 col-lg-2">
                             <img className="img-fluid d-block" src="email.png" />
                         </div>
-                        <div className="d-flex flex-column justify-content-center p-3 col-lg-7 order-1 order-lg-2">
+                        <div className="d-flex flex-column justify-content-center p-3 ml-1 col-lg-7 order-1 order-lg-2">
                             <h3>聯絡我們</h3>
                             <p className="lead mb-0">Email: cmsforum.official@gmail.com</p>
                         </div>
