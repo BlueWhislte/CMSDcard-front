@@ -33,13 +33,20 @@ export default function AboutUs() {
                         </div>
                         <div className="d-flex flex-column justify-content-center p-3 ml-1 col-lg-7 order-1 order-lg-2">
                             <h3>聯絡我們</h3>
-                            <p className="lead mb-0">Email: cmsforum.official@gmail.com</p>
+                            <p className="lead mb-0">
+                                Email: cmsforum.official@gmail.com <br />
+                                如果有任何使用上的困難、疑問，抑或又任何建議、指教，都歡迎告訴我們!
+                                </p>
                         </div>
                     </div>
                     <div className="row mt-2 mb-5 d-flex justify-content-center">
                         <div className="d-flex flex-column justify-content-center p-3 col-lg-7">
                             <h3>網站作者</h3>
-                            <p className="lead mb-0">鹿介，一位協同中學高X生。喜歡打code，因而把整個暑假都奉獻給這個網站了。平常會彈吉他、看Youtube當消遣，遊戲只玩Minecraft。整天只知道打code的下場就是書都沒有讀，成績不知道會發生什麼事情QQ。</p>
+                            <p className="lead mb-0">
+                                鹿介，協同中學高X生。喜歡打code，因而把整個暑假都奉獻給這個網站了。
+                                平常會彈吉他、看Youtube、玩Minecraft當消遣。
+                                一般上課不太睡覺的，但每逢生物課必定先睡半節再說，導致每次上完生物課心情都很好。
+                                </p>
                         </div>
                         <div className="p-0 col-lg-2">
                             <img className="img-fluid d-block" src="lemon.png" />
