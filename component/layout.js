@@ -30,7 +30,7 @@ export default function Layout({ children }) {
                                 <Link href="/about-us">
                                     <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>關於我們</a>
                                 </Link>
-                                <Link href="/404">
+                                <Link href="/blog">
                                     <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>部落格</a>
                                 </Link>
                                 <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: "#12bbad" }} />
