@@ -1,6 +1,6 @@
 import Layout from '../component/layout'
 import Link from 'next/link'
-import { themeColor } from '../../functions/utils'
+import { themeColor } from '../functions/utils'
 
 export default function Home() {
   return (
