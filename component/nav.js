@@ -20,30 +20,30 @@ export default function Nav() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbar11">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item">
+                            <Link href={token ? "/article/hot" : ""}>
+                                <a className="nav-link">熱門文章</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href={token ? "/article/new" : ""}>
+                                <a className="nav-link">最新文章</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href={token ? "/404" : ""}>
+                                <a className="nav-link">先人文章</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href={token ? "/article/post" : ""}>
+                                <a className="nav-link">我要投稿</a>
+                            </Link>
+                        </li>
+                    </ul>
                     {token ? (
                         <>
-                            <ul className="navbar-nav mr-auto">
-                                <li className="nav-item">
-                                    <Link href="/article/hot">
-                                        <a className="nav-link">熱門文章</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link href="/article/new">
-                                        <a className="nav-link">最新文章</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link href="/404">
-                                        <a className="nav-link">先人文章</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link href="/article/post">
-                                        <a className="nav-link">我要投稿</a>
-                                    </Link>
-                                </li>
-                            </ul>
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
                                     <Link href="/user/account">
