@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout>
       <main>
-        <div className="py-5 text-center text-white h-100 align-items-center d-flex" style={{backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg)", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "repeat"}} SameSite="None">
+        <div className="py-5 text-center text-white h-100 align-items-center d-flex" style={{backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg)", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "repeat"}} samesite="None">
           <div className="container py-5">
             <div className="row">
               <div className="mx-auto col-lg-8 col-md-10">
