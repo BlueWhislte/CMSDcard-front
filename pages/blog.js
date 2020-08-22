@@ -32,8 +32,6 @@ export default function Blog({ contentHtml }) {
             <br />
             <br />
             <br />
-            <br />
-            <br />
         </Layout>
     )
 }
