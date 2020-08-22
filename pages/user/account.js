@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import Layout from '../../component/layout'
 import Loading from '../../component/loading'
 import { themeColor } from '../../functions/utils'
+import { useRouter } from 'next/router'
 
 export default function Account() {
+    const router = useRouter()
     const [user, setUser] = useState()
     const [editing, setEdit] = useState(false)
 
