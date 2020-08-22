@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Top from './top'
 import Nav from './nav'
+import { themeColor } from '../../functions/utils'
 
 export default function Layout({ children }) {
     return (
@@ -33,7 +34,7 @@ export default function Layout({ children }) {
                                 <Link href="/blog">
                                     <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>部落格</a>
                                 </Link>
-                                <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: "#12bbad" }} />
+                                <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: themeColor }} />
                                 <p className="mb-0 py-1">©2020 CMSForum all rights reserved</p>
                             </div>
                         </div>

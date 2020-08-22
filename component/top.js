@@ -1,6 +1,8 @@
+import { themeColor } from '../../functions/utils'
+
 export default function Top() {
     return (
-        <div className="text-center py-4" style={{ backgroundColor: "#12bbad" }}>
+        <div className="text-center py-4" style={{ backgroundColor: themeColor }}>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">

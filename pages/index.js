@@ -1,5 +1,6 @@
 import Layout from '../component/layout'
 import Link from 'next/link'
+import { themeColor } from '../../functions/utils'
 
 export default function Home() {
   return (
@@ -15,10 +16,10 @@ export default function Home() {
                 <h1 className="display-3 mb-4">歡迎來到<br />協同學生論壇</h1>
                 <p className="lead mb-5">這是一個專屬於協同人的論壇，請在這裡自由發表對學校、對課程等等的看法</p>
                 <Link href="/user/login">
-                  <a className="btn btn-lg mx-1" style={{ borderColor: "#12bbad", color: "#12bbad" }}>我要登入</a>
+                  <a className="btn btn-lg mx-1" style={{ borderColor: themeColor, color: themeColor }}>我要登入</a>
                 </Link>
                 <Link href="/user/register">
-                  <a className="btn btn-lg mx-1" style={{ backgroundColor: "#12bbad", borderColor: "#12bbad" }}>我要註冊</a>
+                  <a className="btn btn-lg mx-1" style={{ backgroundColor: themeColor, borderColor: themeColor }}>我要註冊</a>
                 </Link>
                 <br />
                 <br />

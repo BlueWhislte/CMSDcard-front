@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { themeColor } from '../../functions/utils'
 
 export default function Nav() {
     const [token, setToken] = useState()
@@ -51,7 +52,7 @@ export default function Nav() {
                                 </li>
                             </ul>
                             <Link href="/user/login">
-                                <a className="btn navbar-btn ml-md-2" onClick={() => { localStorage.removeItem('auth') }} style={{ backgroundColor: "#12bbad" }}>登出</a>
+                                <a className="btn navbar-btn ml-md-2" onClick={() => { localStorage.removeItem('auth') }} style={{ backgroundColor: themeColor }}>登出</a>
                             </Link>
                         </>
                     ) : (
@@ -64,7 +65,7 @@ export default function Nav() {
                                     </li>
                                 </ul>
                                 <Link href="/user/login">
-                                    <a className="btn navbar-btn ml-md-2" style={{ backgroundColor: "#12bbad" }}>登入</a>
+                                    <a className="btn navbar-btn ml-md-2" style={{ backgroundColor: themeColor }}>登入</a>
                                 </Link>
                             </>
                         )}

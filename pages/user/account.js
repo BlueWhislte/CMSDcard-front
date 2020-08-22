@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Layout from '../../component/layout'
 import Loading from '../../component/loading'
+import { themeColor } from '../../functions/utils'
 
 export default function Account() {
     const [user, setUser] = useState()
@@ -77,7 +78,7 @@ export default function Account() {
                                     </h5>
                                     {editing ? <div className="row">
                                         <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-name" placeholder="新暱稱" />
-                                        <button type="button" className="btn" style={{ background: "#12bbad", color: "#FFFFFF" }} onClick={putUserName}>更改暱稱</button>
+                                        <button type="button" className="btn" style={{ background: themeColor, color: "#FFFFFF" }} onClick={putUserName}>更改暱稱</button>
                                     </div> : null}
                                 </div>
                                 <div className="my-4">
@@ -99,7 +100,7 @@ export default function Account() {
                                     </h3>
                                 <div className="row">
                                     <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-password" placeholder="新密碼" />
-                                    <button type="button" className="btn" style={{ background: "#12bbad", color: "#FFFFFF" }} onClick={putUserPassword}>更改密碼</button>
+                                    <button type="button" className="btn" style={{ background: "#55a566", color: "#FFFFFF" }} onClick={putUserPassword}>更改密碼</button>
                                 </div>
                                 <br />
                                 <br />

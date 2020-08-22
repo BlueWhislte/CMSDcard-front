@@ -1,4 +1,5 @@
 import Layout from '../../component/layout'
+import { themeColor } from '../../functions/utils'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
@@ -46,7 +47,7 @@ export default function Post() {
                                         <textarea className="form-control" id="form-content" rows="10" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <button type="button" className="btn" style={{ background: "#12bbad", color: "#FFFFFF" }} onClick={postArticle}>潑文</button>
+                                <button type="button" className="btn" style={{ background: themeColor, color: "#ffffff" }} onClick={postArticle}>潑文</button>
                             </form>
                         </div>
                     </div>
