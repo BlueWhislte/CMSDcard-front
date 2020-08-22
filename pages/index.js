@@ -1,8 +1,16 @@
 import Layout from '../component/layout'
 import Link from 'next/link'
 import { themeColor } from '../functions/utils'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+
+  useEffect(()=>{
+    if(localStorage.getItem('auth')) router.push('/article/hot')
+  })
+
   return (
     <Layout>
       <main>
