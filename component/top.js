@@ -1,4 +1,4 @@
-import { themeColor } from '../../functions/utils'
+import { themeColor } from '../functions/utils'
 
 export default function Top() {
     return (
