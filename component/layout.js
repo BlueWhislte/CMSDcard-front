@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <div>
             <Head>
                 <title>協同學生論壇 CMS Forum</title>
-                {/* <link rel="icon" href="/favicon.ico" /> */}
+                <link rel="icon" href="/favicon.ico" />
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -34,7 +34,7 @@ export default function Layout({ children }) {
                                 <Link href="/blog">
                                     <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>部落格</a>
                                 </Link>
-                                <i className="d-block fa fa-commenting fa-3x mx-auto" style={{ color: themeColor }} />
+                                <img className="d-block mx-auto" src="/shorts.png"/>
                                 <p className="mb-0 py-1">©2020 CMSForum all rights reserved</p>
                             </div>
                         </div>
