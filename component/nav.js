@@ -12,9 +12,11 @@ export default function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: "#000000" }}>
             <div className="container">
-                <span className="navbar-brand">
-                    <i className="fa d-inline fa-commenting fa-lg"></i>
-                </span>
+                <Link href={token ? "" : "/"}>
+                    <a className="navbar-brand">
+                        <i className="fa d-inline fa-commenting fa-lg"></i>
+                    </a>
+                </Link>
                 <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                     data-target="#navbar11">
                     <span className="navbar-toggler-icon"></span>
