@@ -35,7 +35,7 @@ export default function AboutUs() {
                             <h3>聯絡我們</h3>
                             <p className="lead mb-0">
                                 Email: cmsforum.official@gmail.com <br />
-                                如果有任何使用上的困難、疑問，抑或又任何建議、指教，都歡迎告訴我們!
+                                如果有任何使用上的困難、疑問，抑或有任何建議、指教，都歡迎告訴我們!
                                 </p>
                         </div>
                     </div>
@@ -45,11 +45,11 @@ export default function AboutUs() {
                             <p className="lead mb-0">
                                 鹿介，協同中學高X生。喜歡打code，因而把整個暑假都奉獻給這個網站了。
                                 平常會彈吉他、看Youtube、玩Minecraft當消遣。
-                                一般上課不太睡覺的，但每逢生物課必定先睡半節再說，導致每次上完生物課心情都很好。
+                                一般上課不太睡覺的，但每逢生物課必定先睡半節再說，導致每次上完課心情都很好。
                                 </p>
                         </div>
                         <div className="p-0 col-lg-2">
-                            <img className="img-fluid d-block" src="lemon.png" />
+                            <img className="img-fluid d-block" src="avatar.png" />
                         </div>
                     </div>
                 </div>
