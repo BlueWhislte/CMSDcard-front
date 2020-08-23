@@ -36,8 +36,7 @@ export default function Register() {
                 <div className="container">
                     <div className="row">
                         <div className="mx-auto col-lg-6 col-10 bg-white p-5">
-                            <h1>歡迎註冊 :D</h1>
-                            <p className="mb-3 mt-2">註冊並享受言論自由吧!</p>
+                            <h1 className="mb-4">歡迎註冊 :D</h1>
                             <form className="text-left">
                                 <div className="form-group">
                                     <label htmlFor="form16">暱稱</label>
