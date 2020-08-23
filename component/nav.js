@@ -34,11 +34,6 @@ export default function Nav() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href={token ? "/404" : ""}>
-                                <a className="nav-link">先人文章</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
                             <Link href={token ? "/article/post" : ""}>
                                 <a className="nav-link">我要投稿</a>
                             </Link>
