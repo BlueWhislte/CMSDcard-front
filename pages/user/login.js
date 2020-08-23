@@ -31,7 +31,7 @@ export default function Login() {
 
     return (
         <Layout>
-            <div className="py-5 text-center" style={{ backgroundImage: "url('https://static.pingendo.com/cover-bubble-dark.svg')", backgroundSize: "cover" }} samesite="None" >
+            <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .6))", backgroundSize: "cover" }} samesite="None" >
                 <div className="container">
                     <br />
                     <br />

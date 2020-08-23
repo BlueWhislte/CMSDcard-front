@@ -32,10 +32,10 @@ export default function Register() {
 
     return (
         <Layout>
-            <div className="py-5 text-center" >
+            <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .6))", backgroundSize: "cover" }} >
                 <div className="container">
                     <div className="row">
-                        <div className="mx-auto col-lg-6 col-10">
+                        <div className="mx-auto col-lg-6 col-10 bg-white p-5">
                             <h1>歡迎註冊 :D</h1>
                             <p className="mb-3 mt-2">註冊並享受言論自由吧!</p>
                             <form className="text-left">
