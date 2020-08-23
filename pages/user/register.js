@@ -32,7 +32,7 @@ export default function Register() {
 
     return (
         <Layout>
-            <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .6))", backgroundSize: "cover" }} >
+            <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .75))", backgroundSize: "cover" }} >
                 <div className="container">
                     <div className="row">
                         <div className="mx-auto col-lg-6 col-10 bg-white p-5">
