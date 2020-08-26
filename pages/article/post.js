@@ -39,7 +39,7 @@ export default function Post() {
                             <form className="text-left">
                                 <div className="form-group">
                                     <label htmlFor="form16">標題</label>
-                                    <input type="text" className="form-control" id="form-title" placeholder="你的主題" />
+                                    <input type="text" className="form-control" id="form-title" placeholder="你的主題" autoComplete="off" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="form17">內文</label>

@@ -79,7 +79,7 @@ export default function Account() {
                                         </button>
                                     </h5>
                                     {editing ? <div className="row">
-                                        <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-name" placeholder="新暱稱" />
+                                        <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-name" placeholder="新暱稱" autoComplete="off" />
                                         <button type="button" className="btn" style={{ background: themeColor, color: "#FFFFFF" }} onClick={putUserName}>更改暱稱</button>
                                     </div> : null}
                                 </div>
@@ -101,7 +101,7 @@ export default function Account() {
                                     密碼
                                     </h3>
                                 <div className="row">
-                                    <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-password" placeholder="新密碼" />
+                                    <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-password" placeholder="新密碼" autoComplete="off" />
                                     <button type="button" className="btn" style={{ background: "#55a566", color: "#FFFFFF" }} onClick={putUserPassword}>更改密碼</button>
                                 </div>
                                 <br />
