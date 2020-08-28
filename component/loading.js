@@ -1,6 +1,6 @@
 export default function Loading() {
     return (
-        <div className="py-5" >
+        <div className="py-5 mt-5" >
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-1">
