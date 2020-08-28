@@ -15,7 +15,10 @@ export default function Hot() {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-            if (data.status == 401 || data.status == 403) router.push('/user/login')
+            if (data.status == 401 || data.status == 403) {
+                router.push('/user/login')
+                router.reload()
+            }
             else setData(await data.json())
         }
         setInterval(fetchData, 1000)

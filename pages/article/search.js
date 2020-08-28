@@ -28,7 +28,10 @@ export default function Search() {
                 regex: document.getElementById('form-regex').value
             })
         })
-        if (data.status == 401 || data.status == 403) router.push('/user/login')
+        if (data.status == 401 || data.status == 403)  {
+            router.push('/user/login')
+            router.reload()
+        }
         else setData(await data.json())
     }
 

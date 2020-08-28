@@ -19,7 +19,10 @@ export default function Article() {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
                     }
                 })
-                if (articleData.status == 401 || articleData.status == 403) router.push('/user/login')
+                if (articleData.status == 401 || articleData.status == 403) {
+                    router.push('/user/login')
+                    router.reload()
+                }
                 else if (articleData.status == 404) router.push('/404')
                 else setArticle(await articleData.json())
             }
@@ -30,7 +33,10 @@ export default function Article() {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
                     }
                 })
-                if (commentsData.status == 401 || commentsData.status == 403) router.push('/user/login')
+                if (commentsData.status == 401 || commentsData.status == 403) {
+                    router.push('/user/login')
+                    router.reload()
+                }
                 else setComments(await commentsData.json())
             }
 

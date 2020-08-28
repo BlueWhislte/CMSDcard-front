@@ -16,7 +16,10 @@ export default function Account() {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-            if (data.status == 401 || data.status == 403) router.push('/user/login')
+            if (data.status == 401 || data.status == 403) {
+                router.push('/user/login')
+                router.reload()
+            }
             else setUser(await data.json())
         }
 
