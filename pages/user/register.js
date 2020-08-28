@@ -1,6 +1,7 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+import { themeColor } from '../../functions/utils'
 
 export default function Register() {
     const router = useRouter()
@@ -32,7 +33,7 @@ export default function Register() {
 
     return (
         <Layout>
-            <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .75))", backgroundSize: "cover" }} >
+            <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .75)), url(/like.jpg)", backgroundSize: "cover" }} >
                 <div className="container">
                     <div className="row">
                         <div className="mx-auto col-lg-6 col-10 bg-white p-5">
@@ -52,7 +53,7 @@ export default function Register() {
                                     <label htmlFor="form20">密碼</label>
                                     <p>將由系統生成暫時密碼，並傳送至您的電子郵件信箱。</p>
                                 </div>
-                                <button type="button" className="btn mt-1" style={{ background: "#12bbad", color: "#ffffff" }} onClick={postRegister}>註冊</button>
+                                <button type="button" className="btn mt-1" style={{ background: themeColor, color: "#ffffff" }} onClick={postRegister}>註冊</button>
                             </form>
                         </div>
                     </div>

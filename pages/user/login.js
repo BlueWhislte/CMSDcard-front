@@ -1,6 +1,7 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { themeColor } from '../../functions/utils'
 
 export default function Login() {
     const router = useRouter()
@@ -33,11 +34,8 @@ export default function Login() {
         <Layout>
             <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .6))", backgroundSize: "cover" }} samesite="None" >
                 <div className="container">
-                    <br />
-                    <br />
-                    <br />
                     <div className="row">
-                        <div className="mx-auto col-md-6 col-10 bg-white p-5">
+                        <div className="mx-auto col-md-6 col-10 bg-white p-5 my-5">
                             <h1 className="mb-4">登入</h1>
                             <form>
                                 <div className="form-group">
@@ -49,13 +47,10 @@ export default function Login() {
                                         <a href="#">顯示密碼</a>
                                     </small> */}
                                 </div>
-                                <button type="button" className="btn" onClick={postLogin} style={{ background: "#12bbad", color: "#ffffff" }}>登入</button>
+                                <button type="button" className="btn" onClick={postLogin} style={{ background: themeColor, color: "#ffffff" }}>登入</button>
                             </form>
                         </div>
                     </div>
-                    <br />
-                    <br />
-                    <br />
                 </div>
             </div>
         </Layout>
