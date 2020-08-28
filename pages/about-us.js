@@ -21,7 +21,7 @@ export default function AboutUs() {
                         <div className="d-flex flex-column justify-content-center p-3 col-lg-7">
                             <h3>創立宗旨</h3>
                             <p className="lead mb-0">
-                                讓學生們能夠通過這個平台，討論校內事務；
+                                希望協同的學生們能夠通過這個平台，一起討論校內事務；
                                 並能夠將意見彙整，要求校方做出改變。
                             </p>
                         </div>
