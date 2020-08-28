@@ -45,13 +45,6 @@ export default function Hot() {
                     )
                 }
             </main>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
         </Layout>
     )
 }

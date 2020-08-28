@@ -107,10 +107,6 @@ export default function Account() {
                                     <input type="text" className="form-control col-md-4 ml-5 mr-3" id="form-password" placeholder="新密碼" autoComplete="off" />
                                     <button type="button" className="btn" style={{ background: "#55a566", color: "#FFFFFF" }} onClick={putUserPassword}>更改密碼</button>
                                 </div>
-                                <br />
-                                <br />
-                                <br />
-                                <br />
                             </div>
                         </div>
                     </div>

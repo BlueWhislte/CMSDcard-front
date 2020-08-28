@@ -45,13 +45,6 @@ export default function New() {
                     )
                 }
             </main>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
         </Layout>
     )
 }

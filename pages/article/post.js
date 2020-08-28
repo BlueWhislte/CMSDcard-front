@@ -28,9 +28,7 @@ export default function Post() {
 
     return (
         <Layout>
-            <br />
-            <br />
-            <div className="py-5 text-center" >
+            <div className="py-5 text-center mt-3" >
                 <div className="container">
                     <div className="row">
                         <div className="mx-auto col-lg-6 col-10">
@@ -53,7 +51,6 @@ export default function Post() {
                     </div>
                 </div>
             </div>
-            <br />
         </Layout>
     )
 }

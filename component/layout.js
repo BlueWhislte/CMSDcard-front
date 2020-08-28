@@ -6,7 +6,7 @@ import { themeColor } from '../functions/utils'
 
 export default function Layout({ children }) {
     return (
-        <div>
+        <div className="d-flex flex-column min-vh-100">
             <Head>
                 <title>協同學生論壇 CMS Forum</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
 
             <div>{children}</div>
 
-            <footer className="bg-light">
+            <footer className="bg-light mt-auto">
                 <div className="py-3">
                     <div className="container">
                         <div className="row">

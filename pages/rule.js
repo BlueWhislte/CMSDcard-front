@@ -24,10 +24,6 @@ export default function Rule({contentHtml}) {
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
         </Layout>
     )
 }

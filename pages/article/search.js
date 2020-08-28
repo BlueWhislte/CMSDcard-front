@@ -9,14 +9,6 @@ export default function Search() {
     const router = useRouter()
     const [data, setData] = useState()
 
-    // useEffect(() => {
-    //     async function fetchData() {
-
-    //     }
-    //     setInterval(fetchData, 1000)
-    //     fetchData()
-    // }, [])
-
     const search = async () => {
         const data = await fetch('http://localhost:6001/post/search', {
             method: 'PUT',
@@ -66,8 +58,6 @@ export default function Search() {
                     )
                 }
             </main>
-            <br />
-            <br />
         </Layout>
     )
 }

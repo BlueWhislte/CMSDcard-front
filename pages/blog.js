@@ -26,12 +26,6 @@ export default function Blog({ contentHtml }) {
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
         </Layout>
     )
 }
