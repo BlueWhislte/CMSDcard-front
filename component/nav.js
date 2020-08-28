@@ -14,7 +14,7 @@ export default function Nav() {
             <div className="container">
                 <Link href={token ? "" : "/"}>
                     <a className="navbar-brand">
-                        <img className="d-inline" src="/shorts.png" />
+                        <img className="d-inline" src="/img/shorts.png" />
                     </a>
                 </Link>
                 <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"

@@ -34,7 +34,7 @@ export default function Layout({ children }) {
                                 <Link href="/blog">
                                     <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>部落格</a>
                                 </Link>
-                                <img className="d-block mx-auto" src="/shorts.png"/>
+                                <img className="d-block mx-auto" src="/img/shorts.png"/>
                                 <p className="mb-0 py-1">©2020 CMSForum all rights reserved</p>
                             </div>
                         </div>
