@@ -22,7 +22,10 @@ export default function Login() {
                 password: document.getElementById('form-pass').value
             })
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status == 401) return window.alert('Sorry!  Σ(･口･)   Login failed')
+                else return res.json()
+            })
             .then(data => {
                 localStorage.setItem('auth', data.accessToken)
                 router.reload()
