@@ -39,6 +39,7 @@ export default function Account() {
                 password: document.getElementById('form-password').value
             })
         }).then(res => res.json())
+        .then(() => document.getElementById('form-password').value = '')
     }
 
     const putUserName = async () => {
