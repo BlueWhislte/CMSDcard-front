@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 export default function Post() {
     const router = useRouter()
 
-    useEffect(()=>{
+    useEffect(() => {
         if (!localStorage.getItem('auth')) router.push('/user/login')
     }, [])
 
@@ -21,8 +21,9 @@ export default function Post() {
                 title: document.getElementById('form-title').value,
                 content: document.getElementById('form-content').value
             })
-        }).then(res => {
+        }).then(async res => {
             if (res.ok) router.push(`/article/new`)
+            else if (res.status == 400) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
         })
     }
 
