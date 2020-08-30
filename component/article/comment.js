@@ -14,6 +14,7 @@ export default function Comment({ comments, postId }) {
                 content: document.getElementById('form-comment').value
             })
         }).then(res => res.json())
+        .then(() => document.getElementById('form-comment').value = '')
     }
 
     return (
