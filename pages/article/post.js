@@ -11,6 +11,9 @@ export default function Post() {
     }, [])
 
     const postArticle = async () => {
+        if (!document.getElementById('form-title').value) return window.alert('Sorry!  Σ(･口･)   填好填滿不要留空白啦')
+        else if (!document.getElementById('form-content').value) return window.alert('Sorry!  Σ(･口･)   填好填滿不要留空白啦')
+        
         return await fetch('http://localhost:6001/post', {
             method: 'POST',
             headers: {

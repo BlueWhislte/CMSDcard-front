@@ -14,6 +14,9 @@ export default function Register() {
     if (token) router.push('/article/hot')
 
     const postRegister = async () => {
+        if (!document.getElementById('form-name').value) return window.alert('Sorry!  Σ(･口･)   記得填你名字啦')
+        else if (!document.getElementById('form-email').value) return window.alert('Sorry!  Σ(･口･)   記得填你電子郵件啦')
+        
         return await fetch('http://localhost:6001/user/register', {
             method: 'POST',
             headers: {

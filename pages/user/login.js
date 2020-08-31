@@ -24,7 +24,7 @@ export default function Login() {
             })
         })
             .then(res => {
-                if (res.status == 401) return window.alert('Sorry!  Σ(･口･)   Login failed')
+                if (res.status == 401) return window.alert('Sorry!  Σ(･口･)   登入失敗')
                 else return res.json()
             })
             .then(data => {

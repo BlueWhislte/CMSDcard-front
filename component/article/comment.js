@@ -3,6 +3,8 @@ import { convertBriefTime, themeColor } from '../../functions/utils'
 export default function Comment({ comments, postId }) {
 
     const postComment = async () => {
+        if (!document.getElementById('form-comment').value) return window.alert('Sorry!  Σ(･口･)   你的留言是空白的ㄟ')
+        
         return await fetch(`http://localhost:6001/comment/${postId}`, {
             method: 'POST',
             headers: {
