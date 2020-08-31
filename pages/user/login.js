@@ -1,10 +1,11 @@
 import Layout from '../../component/layout'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { themeColor } from '../../functions/utils'
 
 export default function Login() {
     const router = useRouter()
+    const [showPass, setShowPass] = useState(false)
 
     useEffect(() => {
         if (localStorage.getItem('auth')) router.push('/article/hot')
@@ -33,6 +34,16 @@ export default function Login() {
             .catch(err => { console.log(err) })
     }
 
+    const showPassReverse = () => {
+        if (document.getElementById('form-pass').getAttribute('type') === "password") {
+            document.getElementById('form-pass').setAttribute('type', 'text')
+            setShowPass(true)
+        } else {
+            document.getElementById('form-pass').setAttribute('type', 'password')
+            setShowPass(false)
+        }
+    }
+
     return (
         <Layout>
             <div className="py-5 text-center" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .6))", backgroundSize: "cover" }} samesite="None" >
@@ -46,9 +57,11 @@ export default function Login() {
                                 </div>
                                 <div className="form-group mb-3">
                                     <input type="password" className="form-control" placeholder="密碼" id="form-pass" autoComplete="off" />
-                                    {/* <small className="form-text text-muted text-right mt-2">
-                                        <a href="#">顯示密碼</a>
-                                    </small> */}
+                                    <small className="form-text text-muted text-right mt-2">
+                                        <button type="button" className="btn text-primary my-0 p-0" style={{fontSize:"13px"}} onClick={showPassReverse}>{
+                                            showPass ? '隱藏密碼' : '顯示密碼'
+                                        }</button>
+                                    </small>
                                 </div>
                                 <button type="button" className="btn" onClick={postLogin} style={{ background: themeColor, color: "#ffffff" }}>登入</button>
                             </form>
