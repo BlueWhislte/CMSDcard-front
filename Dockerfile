@@ -5,7 +5,7 @@ FROM node:latest
 WORKDIR /app
 
 # install dependencies
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 
 # copy whole src files
@@ -13,6 +13,9 @@ COPY . .
 
 # build app
 RUN npm run build
+
+# open port 3000 to connect
+EXPOSE 3000
 
 # run app
 CMD ["npm", "start"]
