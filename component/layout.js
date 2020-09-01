@@ -37,7 +37,7 @@ export default function Layout({ children }) {
                                 <Link href="/rule">
                                     <a className="d-block mx-3 mb-0 text-dark" style={{textDecoration: "none"}}>平台守則</a>
                                 </Link>
-                                <img className="d-block mx-auto" src="/img/shorts.png"/>
+                                <img className="d-block mx-auto" src="/img/shorts-lg.png"/>
                                 <p className="mb-0 py-1">©2020 CMSForum all rights reserved</p>
                             </div>
                         </div>
