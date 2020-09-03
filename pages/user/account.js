@@ -38,7 +38,9 @@ export default function Account() {
             body: JSON.stringify({
                 password: document.getElementById('form-password').value
             })
-        }).then(res => res.json())
+        }).then(async res => {
+            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+        })
         .then(() => document.getElementById('form-password').value = '')
     }
 
@@ -54,7 +56,10 @@ export default function Account() {
             body: JSON.stringify({
                 name: document.getElementById('form-name').value
             })
-        }).then(res => res.json())
+        }).then(async res => {
+            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+        })
+        .then(() => document.getElementById('form-password').value = '')
     }
 
     return (
