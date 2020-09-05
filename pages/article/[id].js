@@ -13,7 +13,7 @@ export default function Article() {
     useEffect(() => {
         if (router.query.id) {
             async function fetchArticleData() {
-                const url = `${process.env.API_URL}/post/` + router.query.id
+                const url = `${process.env.NEXT_PUBLIC_API_URL}/post/` + router.query.id
                 const articleData = await fetch(url, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
@@ -27,7 +27,7 @@ export default function Article() {
                 else setArticle(await articleData.json())
             }
             async function fetchCommentsData() {
-                const url = `${process.env.API_URL}/comment/post/` + router.query.id
+                const url = `${process.env.NEXT_PUBLIC_API_URL}/comment/post/` + router.query.id
                 const commentsData = await fetch(url, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
@@ -46,7 +46,7 @@ export default function Article() {
     }, [router.query.id]);
 
     const postLike = async () => {
-        return await fetch(`${process.env.API_URL}/post/like/${router.query.id}`, {
+        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/like/${router.query.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ export default function Hot() {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch(`${process.env.API_URL}/post/select/hot`, {
+            const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/select/hot`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }

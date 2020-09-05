@@ -5,7 +5,7 @@ export default function Comment({ comments, postId }) {
     const postComment = async () => {
         if (!document.getElementById('form-comment').value) return window.alert('Sorry!  Σ(･口･)   你的留言是空白的ㄟ')
         
-        return await fetch(`${process.env.API_URL}/comment/${postId}`, {
+        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/comment/${postId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

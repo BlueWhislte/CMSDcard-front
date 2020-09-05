@@ -17,7 +17,7 @@ export default function Register() {
         if (!document.getElementById('form-name').value) return window.alert('Sorry!  Σ(･口･)   記得填你名字啦')
         else if (!document.getElementById('form-email').value) return window.alert('Sorry!  Σ(･口･)   記得填你電子郵件啦')
         
-        return await fetch(`${process.env.API_URL}/user/register`, {
+        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
