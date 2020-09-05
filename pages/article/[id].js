@@ -13,7 +13,7 @@ export default function Article() {
     useEffect(() => {
         if (router.query.id) {
             async function fetchArticleData() {
-                const url = '${process.env.API_URL}/post/' + router.query.id
+                const url = `${process.env.API_URL}/post/` + router.query.id
                 const articleData = await fetch(url, {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
