@@ -14,7 +14,7 @@ export default function Post() {
         if (!document.getElementById('form-title').value) return window.alert('Sorry!  Σ(･口･)   填好填滿不要留空白啦')
         else if (!document.getElementById('form-content').value) return window.alert('Sorry!  Σ(･口･)   填好填滿不要留空白啦')
         
-        return await fetch('http://localhost:6001/post', {
+        return await fetch(`${process.env.API_URL}/post`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

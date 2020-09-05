@@ -4,7 +4,7 @@ import { convertDateOnly } from '../../functions/utils'
 export default function Post({ post }) {
 
     const postLike = async () => {
-        return await fetch(`http://localhost:6001/post/like/${post._id}`, {
+        return await fetch(`${process.env.API_URL}/post/like/${post._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

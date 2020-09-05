@@ -10,7 +10,7 @@ export default function New() {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch('http://localhost:6001/post/select/new', {
+            const data = await fetch(`${process.env.API_URL}/post/select/new`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }

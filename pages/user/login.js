@@ -13,7 +13,7 @@ export default function Login() {
 
 
     const postLogin = async () => {
-        return await fetch('http://localhost:6001/user/login', {
+        return await fetch(`${process.env.API_URL}/user/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

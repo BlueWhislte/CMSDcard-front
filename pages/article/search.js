@@ -10,7 +10,7 @@ export default function Search() {
     const [data, setData] = useState()
 
     const search = async () => {
-        const data = await fetch('http://localhost:6001/post/search', {
+        const data = await fetch(`${process.env.API_URL}/post/search`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

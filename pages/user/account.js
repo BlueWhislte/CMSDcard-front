@@ -11,7 +11,7 @@ export default function Account() {
 
     useEffect(() => {
         async function getUserData() {
-            const data = await fetch('http://localhost:6001/user', {
+            const data = await fetch('${process.env.API_URL}/user', {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
@@ -29,7 +29,7 @@ export default function Account() {
     const putUserPassword = async () => {
         if (!document.getElementById('form-password').value) return window.alert('Sorry!  Σ(･口･)   錯誤!')
         
-        return await fetch('http://localhost:6001/user', {
+        return await fetch('${process.env.API_URL}/user', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export default function Account() {
     const putUserName = async () => {
         if (!document.getElementById('form-name').value) return window.alert('Sorry!  Σ(･口･)   錯誤!')
 
-        return await fetch('http://localhost:6001/user', {
+        return await fetch(`${process.env.API_URL}/user`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
