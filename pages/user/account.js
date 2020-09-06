@@ -28,8 +28,8 @@ export default function Account() {
 
     const putUserPassword = async () => {
         if (!document.getElementById('form-password').value) return window.alert('Sorry!  Σ(･口･)   錯誤!')
-        
-        return await fetch('${process.env.NEXT_PUBLIC_API_URL}/user', {
+
+        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export default function Account() {
         }).then(async res => {
             if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
         })
-        .then(() => document.getElementById('form-password').value = '')
+            .then(() => document.getElementById('form-password').value = '')
     }
 
     const putUserName = async () => {
@@ -59,7 +59,7 @@ export default function Account() {
         }).then(async res => {
             if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
         })
-        .then(() => document.getElementById('form-name').value = '')
+            .then(() => document.getElementById('form-name').value = '')
     }
 
     return (
