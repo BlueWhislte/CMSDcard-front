@@ -11,7 +11,7 @@ export default function Account() {
 
     useEffect(() => {
         async function getUserData() {
-            const data = await fetch('${process.env.NEXT_PUBLIC_API_URL}/user', {
+            const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
@@ -59,7 +59,7 @@ export default function Account() {
         }).then(async res => {
             if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
         })
-        .then(() => document.getElementById('form-password').value = '')
+        .then(() => document.getElementById('form-name').value = '')
     }
 
     return (
