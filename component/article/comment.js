@@ -15,7 +15,9 @@ export default function Comment({ comments, postId }) {
                 authorId: '5f28c3d328666f21bca62f7e',
                 content: document.getElementById('form-comment').value
             })
-        }).then(res => res.json())
+        }).then(async res => {
+            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+        })
         .then(() => document.getElementById('form-comment').value = '')
     }
 

@@ -23,8 +23,9 @@ export default function Login() {
                 password: document.getElementById('form-pass').value
             })
         })
-            .then(res => {
+            .then(async res => {
                 if (res.status == 401) return window.alert('Sorry!  Σ(･口･)   登入失敗')
+                else if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
                 else return res.json()
             })
             .then(data => {

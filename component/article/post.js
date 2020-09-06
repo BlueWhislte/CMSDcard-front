@@ -10,7 +10,9 @@ export default function Post({ post }) {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('auth')}`
             }
-        }).then(res => { res.json() })
+        }).then(async res => {
+            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+        })
     }
 
     return (

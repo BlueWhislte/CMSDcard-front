@@ -19,6 +19,7 @@ export default function Hot() {
                 router.push('/user/login')
                 router.reload()
             }
+            else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
             else setData(await data.json())
         }
         setInterval(fetchData, 1000)

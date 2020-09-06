@@ -24,6 +24,7 @@ export default function Article() {
                     router.reload()
                 }
                 else if (articleData.status == 404) router.push('/404')
+                else if (!articleData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
                 else setArticle(await articleData.json())
             }
             async function fetchCommentsData() {
@@ -37,6 +38,7 @@ export default function Article() {
                     router.push('/user/login')
                     router.reload()
                 }
+                else if (!commentsData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
                 else setComments(await commentsData.json())
             }
 
@@ -52,7 +54,9 @@ export default function Article() {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('auth')}`
             }
-        }).then(res => { res.json() })
+        }).then(async res => {
+            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+        })
     }
 
     return (
