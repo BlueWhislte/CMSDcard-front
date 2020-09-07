@@ -24,22 +24,22 @@ export default function Nav() {
                 <div className="collapse navbar-collapse" id="navbar11">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link href={token ? "/article/hot" : ""}>
+                            <Link href={token ? "/article/hot" : "/user/login"}>
                                 <a className="nav-link">熱門文章</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href={token ? "/article/new" : ""}>
+                            <Link href={token ? "/article/new" : "/user/login"}>
                                 <a className="nav-link">最新文章</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href={token ? "/article/post" : ""}>
+                            <Link href={token ? "/article/post" : "/user/login"}>
                                 <a className="nav-link">我要投稿</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href={token ? "/article/search" : ""}>
+                            <Link href={token ? "/article/search" : "/user/login"}>
                                 <a className="nav-link">搜尋文章</a>
                             </Link>
                         </li>
