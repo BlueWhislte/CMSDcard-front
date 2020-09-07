@@ -11,7 +11,7 @@ RUN npm install
 # copy whole src files
 COPY . .
 
-ENV NEXT_PUBLIC_API_URL="http://cmshforum-api.do.kenn.one/"
+ENV NEXT_PUBLIC_API_URL="http://cmshforum-api.do.kenn.one"
 
 # build app
 RUN npm run build
