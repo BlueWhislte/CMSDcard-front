@@ -51,7 +51,7 @@ export default function AboutUs() {
                             </p>
                         </div>
                         <div className="p-0 col-lg-2">
-                            <img className="img-fluid d-block" src="/img/avatar.png" />
+                            <img className="img-fluid d-block" src="/img/avatar.PNG" />
                         </div>
                     </div>
                 </div>
