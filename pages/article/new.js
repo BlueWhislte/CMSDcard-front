@@ -10,17 +10,22 @@ export default function New() {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/select/new`, {
-                headers: {
-                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
+            try {
+                const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/select/new`, {
+                    headers: {
+                        'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                    }
+                })
+                if (data.status == 401 || data.status == 403) {
+                    router.push('/user/login')
+                    router.reload()
                 }
-            })
-            if (data.status == 401 || data.status == 403) {
-                router.push('/user/login')
-                router.reload()
+                else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+                else setData(await data.json())
+            } catch (err) {
+                window.alert("系統錯誤")
+                console.log(err)
             }
-            else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-            else setData(await data.json())
         }
         setInterval(fetchData, 1000)
     }, [])

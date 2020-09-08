@@ -13,33 +13,43 @@ export default function Article() {
     useEffect(() => {
         if (router.query.id) {
             async function fetchArticleData() {
-                const url = `${process.env.NEXT_PUBLIC_API_URL}/post/` + router.query.id
-                const articleData = await fetch(url, {
-                    headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                try {
+                    const url = `${process.env.NEXT_PUBLIC_API_URL}/post/` + router.query.id
+                    const articleData = await fetch(url, {
+                        headers: {
+                            'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                        }
+                    })
+                    if (articleData.status == 401 || articleData.status == 403) {
+                        router.push('/user/login')
+                        router.reload()
                     }
-                })
-                if (articleData.status == 401 || articleData.status == 403) {
-                    router.push('/user/login')
-                    router.reload()
+                    else if (articleData.status == 404) router.push('/404')
+                    else if (!articleData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+                    else setArticle(await articleData.json())
+                } catch (err) {
+                    window.alert("系統錯誤")
+                    console.log(err)
                 }
-                else if (articleData.status == 404) router.push('/404')
-                else if (!articleData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-                else setArticle(await articleData.json())
             }
             async function fetchCommentsData() {
-                const url = `${process.env.NEXT_PUBLIC_API_URL}/comment/post/` + router.query.id
-                const commentsData = await fetch(url, {
-                    headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                try {
+                    const url = `${process.env.NEXT_PUBLIC_API_URL}/comment/post/` + router.query.id
+                    const commentsData = await fetch(url, {
+                        headers: {
+                            'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                        }
+                    })
+                    if (commentsData.status == 401 || commentsData.status == 403) {
+                        router.push('/user/login')
+                        router.reload()
                     }
-                })
-                if (commentsData.status == 401 || commentsData.status == 403) {
-                    router.push('/user/login')
-                    router.reload()
+                    else if (!commentsData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+                    else setComments(await commentsData.json())
+                } catch (err) {
+                    window.alert("系統錯誤")
+                    console.log(err)
                 }
-                else if (!commentsData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-                else setComments(await commentsData.json())
             }
 
             setInterval(fetchArticleData, 1000)

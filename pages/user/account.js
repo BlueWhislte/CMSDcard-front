@@ -11,16 +11,21 @@ export default function Account() {
 
     useEffect(() => {
         async function getUserData() {
-            const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
-                headers: {
-                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
+            try {
+                const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
+                    headers: {
+                        'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                    }
+                })
+                if (data.status == 401 || data.status == 403) {
+                    router.push('/user/login')
+                    router.reload()
                 }
-            })
-            if (data.status == 401 || data.status == 403) {
-                router.push('/user/login')
-                router.reload()
+                else setUser(await data.json())
+            } catch (err) {
+                window.alert("系統錯誤")
+                console.log(err)
             }
-            else setUser(await data.json())
         }
 
         setInterval(getUserData, 1000)
