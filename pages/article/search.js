@@ -11,7 +11,11 @@ export default function Search() {
 
     useEffect(() => {
         if (!localStorage.getItem('auth')) router.push('/user/login')
-    }, [])
+
+        document.getElementById('form-regex').addEventListener('keyup', (e)=>{
+            if (e.keyCode === 13) search()
+        })
+    })
 
     const search = async () => {
         const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/search`, {
