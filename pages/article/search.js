@@ -9,6 +9,10 @@ export default function Search() {
     const router = useRouter()
     const [data, setData] = useState()
 
+    useEffect(() => {
+        if (!localStorage.getItem('auth')) router.push('/user/login')
+    }, [])
+
     const search = async () => {
         const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/search`, {
             method: 'PUT',
