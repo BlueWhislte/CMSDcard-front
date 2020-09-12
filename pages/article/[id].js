@@ -95,8 +95,8 @@ export default function Article() {
                                                 <Linkify>{article.content}</Linkify>
                                             </p>
                                             <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" onClick={postLike} style={{ textDecoration: "none" }}>
-                                                <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
-                                                {article.likeIds.length}
+                                                <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 fa-lg"></i>
+                                                <span style={{fontSize:"large"}}>{article.likeIds.length}</span>
                                             </a>
                                             <hr />
                                             <Comment comments={Array.from(comments || [])} postId={article._id} />
