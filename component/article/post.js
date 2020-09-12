@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { convertDateOnly } from '../../functions/utils'
+import Linkify from 'linkifyjs/react'
 
 export default function Post({ post }) {
 
@@ -28,8 +29,10 @@ export default function Post({ post }) {
                                 </div>
                             </div>
                             <div className="card-body">
-                                        <h5>{post.title}</h5>
-                                        <p style={{ whiteSpace: "pre-line" }} className="mb-3">{post.content}</p>
+                                <h5>{post.title}</h5>
+                                <p style={{ whiteSpace: "pre-line" }} className="mb-3">
+                                    <Linkify tagName="p">{post.content}</Linkify>
+                                </p>
                                 <a id="like" className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }} onClick={postLike}>
                                     <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                     {post.likeIds.length}
