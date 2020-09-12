@@ -37,7 +37,7 @@ export default function Post() {
                     <div className="row">
                         <div className="mx-auto col-lg-6 col-10">
                             <h1>投稿</h1>
-                            <p className="mb-3">你的每個想法都是寶貴的意見!</p>
+                            <p className="mb-3">大聲說出你的想法!</p>
                             <form className="text-left">
                                 <div className="form-group">
                                     <label htmlFor="form16">標題</label>
@@ -49,7 +49,9 @@ export default function Post() {
                                         <textarea className="form-control" id="form-content" rows="10" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <button type="button" className="btn" style={{ background: themeColor, color: "#ffffff" }} onClick={postArticle}>潑文</button>
+                                <small className="text-danger">注意: 文章一旦發佈恕將無法再編輯</small>
+                                <br />
+                                <button type="button" className="btn mt-3" style={{ background: themeColor, color: "#ffffff" }} onClick={postArticle}>潑文</button>
                             </form>
                         </div>
                     </div>
