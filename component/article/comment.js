@@ -1,4 +1,5 @@
 import { convertBriefTime, themeColor } from '../../functions/utils'
+import Linkify from 'linkifyjs/react'
 
 export default function Comment({ comments, postId }) {
 
@@ -39,7 +40,9 @@ export default function Comment({ comments, postId }) {
                             <h6 className="mb-1">{comment.authorName}</h6>
                             <small className="text-muted">{convertBriefTime(comment.postTime)}</small>
                         </div>
-                        <p className="mb-0">{comment.content}</p>
+                        <p className="mb-0">
+                            <Linkify tagName="p">{comment.content}</Linkify>
+                        </p>
                     </div>
                 ))}
             </div>
