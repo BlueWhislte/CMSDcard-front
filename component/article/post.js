@@ -32,8 +32,8 @@ export default function Post({ post }) {
                                 <Link href={`/article/${post._id}`}>
                                     <a style={{textDecoration:'none'}}>
                                         <h5 className="text-dark">{post.title}</h5>
-                                        <p className="mb-3 text-muted">
-                                            {post.content.slice(0, 100) + ' ......'}
+                                        <p className="mb-3 text-muted col-md-10">
+                                            {post.content.slice(0, 150) + ' ......'}
                                         </p>
                                     </a>
                                 </Link>
