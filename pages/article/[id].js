@@ -48,7 +48,7 @@ export default function Article() {
                     else if (!commentsData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
                     else setComments(await commentsData.json())
                 } catch (err) {
-                    window.alert("系統錯誤")
+                    // window.alert("系統錯誤")
                     console.log(err)
                 }
             }

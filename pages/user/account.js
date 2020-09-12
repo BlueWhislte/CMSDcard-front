@@ -23,7 +23,7 @@ export default function Account() {
                 }
                 else setUser(await data.json())
             } catch (err) {
-                window.alert("系統錯誤")
+                // window.alert("系統錯誤")
                 console.log(err)
             }
         }

@@ -24,7 +24,7 @@ export default function Hot() {
                 else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
                 else setData(await data.json())
             } catch (err) {
-                window.alert("系統錯誤")
+                // window.alert("系統錯誤")
                 console.log(err)
             }
         }
