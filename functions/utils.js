@@ -5,7 +5,7 @@ function parseMonth(date) {
 }
 
 function parseDay(date) {
-    let getDay = date.getDay() + 1
+    let getDay = date.getDate()
     let day = getDay < 10 ? '0' + getDay : getDay
     return day
 }
