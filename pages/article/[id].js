@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
 import Loading from '../../component/loading'
+import Linkify from 'linkifyjs/react'
 import { convertFullTime } from '../../functions/utils'
 
 export default function Article() {
@@ -90,7 +91,9 @@ export default function Article() {
                                             <h6 className="text-muted">{convertFullTime(article.postTime)}</h6>
                                             <hr />
                                             <h3>{article.title}</h3>
-                                            <p style={{ whiteSpace: "pre-line" }}>{article.content}</p>
+                                            <p style={{ whiteSpace: "pre-line" }}>
+                                                <Linkify>{article.content}</Linkify>
+                                            </p>
                                             <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" onClick={postLike} style={{ textDecoration: "none" }}>
                                                 <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                                 {article.likeIds.length}
