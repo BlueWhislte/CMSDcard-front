@@ -98,9 +98,6 @@ export default function Article() {
                                                 <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
                                                 {article.likeIds.length}
                                             </a>
-                                            <button className="btn py-0 px-1 pt-0 btn-link mt-1 mb-2 text-warning" style={{ textDecoration: "none" }} disabled>
-                                                <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
-                                            </button>
                                             <hr />
                                             <Comment comments={Array.from(comments || [])} postId={article._id} />
                                         </> : <Loading />

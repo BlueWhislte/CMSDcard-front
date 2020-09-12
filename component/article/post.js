@@ -29,17 +29,12 @@ export default function Post({ post }) {
                                 </div>
                             </div>
                             <div className="card-body">
-                                <h5>{post.title}</h5>
-                                <p style={{ whiteSpace: "pre-line" }} className="mb-3">
-                                    <Linkify tagName="p">{post.content}</Linkify>
-                                </p>
-                                <a id="like" className="btn py-0 px-1 pt-0 btn-link mt-1 mb-0 text-warning" style={{ textDecoration: "none" }} onClick={postLike}>
-                                    <i className="fa fa-thumbs-o-up fa-fw fa-1x py-1 text-warning"></i>
-                                    {post.likeIds.length}
-                                </a>
                                 <Link href={`/article/${post._id}`}>
-                                    <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" style={{ textDecoration: "none" }}>
-                                        <i className="fa fa-comment-o fa-fw fa-1x py-1 text-warning"></i>
+                                    <a style={{textDecoration:'none'}}>
+                                        <h5 className="text-dark">{post.title}</h5>
+                                        <p className="mb-3 text-muted">
+                                            {post.content.slice(0, 100) + ' ......'}
+                                        </p>
                                     </a>
                                 </Link>
                             </div>
