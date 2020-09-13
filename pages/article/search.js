@@ -45,7 +45,7 @@ export default function Search() {
                             <h1 className="display-5 mt-3">搜尋文章</h1>
                             <hr />
                             <div className="row justify-content-center">
-                                <input type="text" className="form-control col-md-8 mr-1" id="form-regex" placeholder="關鍵字" />
+                                <input type="text" className="form-control col-md-8 col-8 mr-1" id="form-regex" placeholder="關鍵字" />
                                 <button type="button" className="btn" onClick={search}>
                                     <i className="fa fa-search mr-1" aria-hidden="true" />
                                     搜尋
