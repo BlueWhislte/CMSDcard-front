@@ -26,7 +26,7 @@ export default function Comment({ comments, postId }) {
         <div>
             <form>
                 <div className="row">
-                    <div className="col-md-11">
+                    <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
                         <input id="form-comment" type="text" className="form-control" placeholder="留言" autoComplete="off" />
                     </div>
                     <button type="button" className="btn" style={{ backgroundColor: themeColor, color: "#ffffff" }} onClick={postComment}>留言</button>
