@@ -11,7 +11,7 @@ export default function Nav() {
     })
 
     return (
-        <Navbar expand="md" style={{ backgroundColor: "#111111" }} >
+        <Navbar expand="md" sticky="top" style={{ backgroundColor: "#111111" }} >
             <div className="container">
                 <Navbar.Brand href="#home">
                     <Link href={token ? "" : "/"}>
