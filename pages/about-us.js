@@ -21,6 +21,7 @@ export default function AboutUs() {
                         <div className="d-flex flex-column justify-content-center p-3 col-lg-7">
                             <h3>創立宗旨</h3>
                             <p className="lead mb-0">
+                                協同學生論壇為一由學生創作並主導的網站。
                                 希望透過這個平台，可以帶動協同學生對校內議題的討論，培養同學們關心學校事務的風氣；
                                 讓每個人都能發表意見，並期望能夠將意見彙整，最後要求校方做出改變。
                             </p>
@@ -43,15 +44,17 @@ export default function AboutUs() {
                     </div>
                     <div className="row mt-2 mb-5 d-flex justify-content-center">
                         <div className="d-flex flex-column justify-content-center p-3 col-lg-7">
-                            <h3>網站作者</h3>
+                            <h3>源碼開放</h3>
                             <p className="lead mb-0">
-                                鹿介，協同中學高X生。喜歡打code，因而把整個暑假都奉獻給這個網站了。
-                                平常會看Youtube、玩Minecraft當消遣。
-                                一般上課不太睡覺的，但每逢生物課必定先睡半節再說，導致每次上完課心情都很好。
+                                本網站由藍哨子團隊架設，為一開源專案，歡迎凡是有能力、有意願的協同人一同維護這個論壇。
+                            </p>
+                            <p className="lead mt-2">
+                                <a className="mr-2" target="_blank" href="https://github.com/BlueWhislte/CMSDcard-front">前端原始碼</a>
+                                <a className="ml-2" target="_blank" href="https://github.com/BlueWhislte/CMSDcard-back">後端原始碼</a>
                             </p>
                         </div>
                         <div className="p-0 col-lg-2">
-                            <img className="img-fluid d-block" src="/img/avatar.PNG" />
+                            <img className="img-fluid d-block" src="/img/code.png" />
                         </div>
                     </div>
                 </div>
