@@ -1,30 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 協同學生論壇前端
 
-## Getting Started
+嗨! 這裡是協同學生論壇的前端! 協同學生論壇為一由學生創作並主導的網站。希望透過這個平台，可以帶動協同學生對校內議題的討論，培養同學們關心學校事務的風氣。
 
-First, run the development server:
+## Architecture (不知道中文叫什麼XD)
 
-```bash
-npm run dev
-# or
-yarn dev
+- Next.js
+
+建議未曾使用過 Next.js 的人類閱讀以下文件:
+
+- [Next.js Documentation](https://nextjs.org/docs) - 了解 Next.js 特色以及 API.
+- [Learn Next.js](https://nextjs.org/learn) - Next.js 官方教學.
+
+## 開始使用
+
+請使用以下指令啟動後台:
+
+``` bash
+npm install 
 ```
+安裝dependencies (只有第一次需要)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+``` bash
+npm run dev
+```
+啟動後台
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 開發
 
-## Learn More
+建議Contributors可以善用 [Issue](https://github.com/BlueWhislte/CMSDcard-front/issues) 針對網站設計做討論，想要做什麼新功能或抓到bug都可以在上面提出。
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
