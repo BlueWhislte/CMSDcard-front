@@ -16,13 +16,15 @@ export default function Hot() {
                         'Authorization': `Bearer ${localStorage.getItem('auth')}`
                     }
                 })
-    
+
                 if (data.status == 401 || data.status == 403) {
                     router.push('/user/login')
                     router.reload()
                 }
                 else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-                else setData(await data.json())
+                else {
+                    setData(await data.json())
+                }
             } catch (err) {
                 // window.alert("系統錯誤")
                 console.log(err)
@@ -45,9 +47,23 @@ export default function Hot() {
 
             <main>
                 {data ?
-                    data.map(post => (
-                        <Post post={post} key={post._id} />
-                    )) : (
+                    (
+                        Array.from(data).length === 0 ? (
+                            <div className="py-5 mt-5" >
+                                <div className="container">
+                                    <div className="row justify-content-center">
+                                        <div className="col-md-4">
+                                            <div className="text-center">
+                                                <h6>本週無熱門文章 :P</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : data.map(post => (
+                            <Post post={post} key={post._id} />
+                        ))
+                    ) : (
                         <Loading />
                     )
                 }
