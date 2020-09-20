@@ -17,7 +17,7 @@ export default function Blog({ contentHtml }) {
                 </div>
             </div>
 
-            <div className="py-3">
+            <div className="py-2">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
