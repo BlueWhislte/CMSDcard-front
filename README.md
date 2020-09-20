@@ -27,5 +27,5 @@ npm run dev
 
 ## 開發
 
-建議Contributors可以善用 [Issue](https://github.com/BlueWhislte/CMSDcard-back/issues) 針對網站設計做討論，想要做什麼新功能或抓到bug都可以在上面提出。
+建議Contributors可以善用 [Issue](https://github.com/BlueWhislte/CMSDcard-front/issues) 針對網站設計做討論，想要做什麼新功能或抓到bug都可以在上面提出。
 
