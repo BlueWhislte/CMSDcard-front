@@ -13,12 +13,18 @@ export default function Nav() {
     return (
         <Navbar expand="md" sticky="top" style={{ backgroundColor: "#111111" }} >
             <div className="container">
-                <Navbar.Brand href="#home">
-                    <Link href={token ? "" : "/"}>
-                        <a className="navbar-brand">
+                <Navbar.Brand>
+                    {token ? (
+                        <div className="navbar-brand">
                             <img className="d-inline" src="/img/shorts.png" />
-                        </a>
-                    </Link>
+                        </div>
+                    ) : (
+                            <Link href="/">
+                                <a className="navbar-brand">
+                                    <img className="d-inline" src="/img/shorts.png" />
+                                </a>
+                            </Link>
+                        )}
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor: "#aaaaaa" }} />
                 <Navbar.Collapse id="basic-navbar-nav">
