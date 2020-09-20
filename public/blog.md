@@ -1,6 +1,6 @@
 ## 許願池連結
 
-[我要許願~](https://docs.google.com/forms/d/e/1FAIpQLSdxKFlo9axLLi5VHlmPiwku2HYiI9aHV_3bynACX-YiPrcvsw/viewform)
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdxKFlo9axLLi5VHlmPiwku2HYiI9aHV_3bynACX-YiPrcvsw/viewform" target="_blank">我要許願~</a>
 
 ---
 
