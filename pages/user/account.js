@@ -120,7 +120,7 @@ export default function Account() {
                                     </h3>
                                 <div className="row">
                                     <input type="text" className="form-control col-lg-4 col-md-6 col-7 ml-5 mr-3" id="form-password" placeholder="新密碼" autoComplete="off" />
-                                    <button type="button" className="btn" style={{ background: "#55a566", color: "#FFFFFF" }} onClick={putUserPassword}>更改密碼</button>
+                                    <button type="button" className="btn" style={{ background: themeColor, color: "#FFFFFF" }} onClick={putUserPassword}>更改密碼</button>
                                 </div>
                             </div>
                         </div>

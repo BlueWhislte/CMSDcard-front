@@ -52,4 +52,4 @@ export function convertDateOnly(iso) {
     return date.getFullYear() + '-' + month + '-' + day
 }
 
-export const themeColor = "#55a566"
+export const themeColor = "#7BA23F"
