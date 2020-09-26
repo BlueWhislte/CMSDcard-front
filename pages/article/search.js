@@ -13,7 +13,7 @@ export default function Search() {
         if (!localStorage.getItem('auth')) router.push('/user/login')
 
         document.getElementById('form-regex').addEventListener('keyup', (e)=>{
-            if (e.keyCode === 13) search()
+            if (e.key === 'Enter') search()
         })
     })
 

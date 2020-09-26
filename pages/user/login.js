@@ -11,7 +11,7 @@ export default function Login() {
         if (localStorage.getItem('auth')) router.push('/article/hot')
 
         document.getElementById('form-pass').addEventListener('keyup', (e)=>{
-            if (e.keyCode === 13) postLogin()
+            if (e.key === 'Enter') postLogin()
         })
     })
 
