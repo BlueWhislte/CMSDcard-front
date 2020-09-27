@@ -16,6 +16,9 @@ export default function Register() {
     const postRegister = async () => {
         if (!document.getElementById('form-name').value) return window.alert('Sorry!  Σ(･口･)   記得填你名字啦')
         else if (!document.getElementById('form-email').value) return window.alert('Sorry!  Σ(･口･)   記得填你電子郵件啦')
+        else if (!document.getElementById('agree-protocol').checked) {
+            return window.alert('Sorry!  Σ(･口･)   請同意使用者條款與隱私權政策')
+        }
         
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/register`, {
             method: 'POST',
@@ -55,6 +58,14 @@ export default function Register() {
                                 <div className="form-group">
                                     <label htmlFor="form20">密碼</label>
                                     <p>將由系統生成暫時密碼，並傳送至您的電子郵件信箱。</p>
+                                </div>
+                                <hr />
+                                <div className="form-group">
+                                    <input type="checkbox" id="agree-protocol" />
+                                    <label className="ml-1">
+                                        我同意
+                                        <a href="">使用者條款與隱私權政策</a>
+                                    </label>
                                 </div>
                                 <button type="button" className="btn mt-1" style={{ background: themeColor, color: "#ffffff" }} onClick={postRegister}>註冊</button>
                             </form>
