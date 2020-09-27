@@ -27,7 +27,9 @@ export default function New() {
                 console.log(err)
             }
         }
-        fetchData()
+        
+        if (!localStorage.getItem('auth')) router.push('/user/login') 
+        else fetchData()
     }, [])
 
     return (

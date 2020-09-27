@@ -53,10 +53,12 @@ export default function Article() {
                 }
             }
 
+            if (!localStorage.getItem('auth')) router.push('/user/login')
+
             setInterval(fetchArticleData, 1000)
             setInterval(fetchCommentsData, 1000)
         }
-    }, [router.query.id]);
+    }, []);
 
     const postLike = async () => {
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/like/${router.query.id}`, {
