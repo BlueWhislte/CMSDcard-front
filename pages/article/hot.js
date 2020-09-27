@@ -30,7 +30,7 @@ export default function Hot() {
                 console.log(err)
             }
         }
-        setInterval(fetchData, 1000)
+        fetchData()
     }, [])
 
     return (

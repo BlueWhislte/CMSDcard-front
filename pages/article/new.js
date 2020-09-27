@@ -27,7 +27,7 @@ export default function New() {
                 console.log(err)
             }
         }
-        setInterval(fetchData, 1000)
+        fetchData()
     }, [])
 
     return (
