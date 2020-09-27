@@ -29,7 +29,7 @@ export default function Article() {
                     else if (!articleData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
                     else setArticle(await articleData.json())
                 } catch (err) {
-                    window.alert("系統錯誤")
+                    // window.alert("系統錯誤")
                     console.log(err)
                 }
             }
