@@ -49,7 +49,7 @@ export default function Post() {
                                         <textarea className="form-control" id="form-content" rows="10" placeholder="你想說的話..."></textarea>
                                     </div>
                                 </div>
-                                <small className="text-danger">注意: 文章一旦發佈恕將無法再編輯</small>
+                                <small className="text-danger">注意: 文章一旦發佈恕將無法再編輯(目前也尚無刪除功能)</small>
                                 <br />
                                 <button type="button" className="btn mt-3" style={{ background: themeColor, color: "#ffffff" }} onClick={postArticle}>潑文</button>
                             </form>
