@@ -31,8 +31,7 @@ export default function Hot() {
             }
         }
 
-        if (!localStorage.getItem('auth')) router.push('/user/login') 
-        else fetchData()
+        fetchData()
     }, [])
 
     return (

@@ -30,7 +30,7 @@ export default function Nav() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link href={token ? "/article/hot" : "/user/login"}>
+                            <Link href="/article/hot">
                                 <a className="nav-link" style={{ color: "#aaaaaa" }}>熱門文章</a>
                             </Link>
                         </li>
