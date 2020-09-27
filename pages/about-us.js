@@ -26,13 +26,13 @@ export default function AboutUs() {
                                 讓每個人都能發表意見，並期望能夠將意見彙整，最後要求校方做出改變。
                             </p>
                         </div>
-                        <div className="p-0 col-lg-2">
-                            <img className="img-fluid d-block" src="/img/idea.png" />
+                        <div className="p-4 col-lg-2">
+                            <img title="Icons made by Freepik from Flaticon" className="img-fluid d-block" src="/img/idea.png" />
                         </div>
                     </div>
                     <div className="row mb-4 mt-5 d-flex justify-content-center">
-                        <div className="p-0 order-2 order-lg-1 col-lg-2">
-                            <img className="img-fluid d-block" src="/img/email.png" />
+                        <div className="p-4 order-2 order-lg-1 col-lg-2">
+                            <img title="Icons made by Freepik from Flaticon" className="img-fluid d-block" src="/img/email.png" />
                         </div>
                         <div className="d-flex flex-column justify-content-center p-3 ml-1 col-lg-7 order-1 order-lg-2">
                             <h3>聯絡我們</h3>
@@ -53,8 +53,8 @@ export default function AboutUs() {
                                 <a className="ml-2" target="_blank" href="https://github.com/BlueWhislte/CMSDcard-back">後端原始碼</a>
                             </p>
                         </div>
-                        <div className="p-0 col-lg-2">
-                            <img className="img-fluid d-block" src="/img/code.png" />
+                        <div className="p-4 col-lg-2">
+                            <img title="Icons made by Freepik from Flaticon" className="img-fluid d-block" src="/img/code.png" />
                         </div>
                     </div>
                 </div>

@@ -7,16 +7,16 @@ import { useRouter } from 'next/router'
 export default function Home() {
   const router = useRouter()
 
-  useEffect(()=>{
-    if(localStorage.getItem('auth')) router.push('/article/hot')
+  useEffect(() => {
+    if (localStorage.getItem('auth')) router.push('/article/hot')
   })
 
   return (
     <Layout>
       <main>
-        <div className="py-5 text-center text-white h-100 align-items-center d-flex" style={{backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/img/blue.jpg)", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "repeat"}} samesite="None">
-          <div className="container py-5">
-            <div className="row">
+        <div className="pt-5 text-center text-white h-100 align-items-center d-flex" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/img/blue.jpg)", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "repeat" }} samesite="None">
+          <div className="container pt-5">
+            <div className="row pb-5  ">
               <div className="mx-auto col-lg-10 col-md-10">
                 <h1 className="display-3 my-5">歡迎來到<br />協同學生論壇</h1>
                 <p className="lead mb-5">這是一個專屬於協同人的論壇，請在這裡自由發表對於學校政策、課程等學校事務的看法</p>
@@ -33,6 +33,9 @@ export default function Home() {
                   </Link>
                 </p>
               </div>
+            </div>
+            <div className="row justify-content-end">
+              <p className="text-muted">Photo by asim alnamat from Pexels</p>
             </div>
           </div>
         </div>
