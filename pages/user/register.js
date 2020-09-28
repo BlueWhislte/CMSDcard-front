@@ -64,7 +64,8 @@ export default function Register() {
                                     <input type="checkbox" id="agree-protocol" />
                                     <label className="ml-1">
                                         我同意
-                                        <a href="">使用者條款與隱私權政策</a>
+                                        <a href="https://docs.google.com/document/d/1KtvH_JEODVn2TRd_HEeAGDxbrXYx5ST9iZ9J8Yz4CQU/edit?usp=sharing" 
+                                        target="_blank">使用者條款與隱私權政策</a>
                                     </label>
                                 </div>
                                 <button type="button" className="btn mt-1" style={{ background: themeColor, color: "#ffffff" }} onClick={postRegister}>註冊</button>
