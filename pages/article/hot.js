@@ -55,7 +55,7 @@ export default function Hot() {
                                     <div className="row justify-content-center">
                                         <div className="col-md-4">
                                             <div className="text-center">
-                                                <h6>本週無熱門文章 :P</h6>
+                                                <h6>最近沒有熱門文章 :P</h6>
                                             </div>
                                         </div>
                                     </div>
