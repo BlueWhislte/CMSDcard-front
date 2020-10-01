@@ -32,7 +32,7 @@ export default function Account() {
     }, [])
 
     const putUserPassword = async () => {
-        if (!document.getElementById('form-password').value) return window.alert('Sorry!  Σ(･口･)   錯誤!')
+        if (!document.getElementById('form-password').value) return
 
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
             method: 'PUT',
@@ -50,7 +50,7 @@ export default function Account() {
     }
 
     const putUserName = async () => {
-        if (!document.getElementById('form-name').value) return window.alert('Sorry!  Σ(･口･)   錯誤!')
+        if (!document.getElementById('form-name').value) return
 
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
             method: 'PUT',
