@@ -11,6 +11,15 @@ export default function Article() {
     const [article, setArticle] = useState(null)
     const [comments, setComments] = useState(null)
 
+    useEffect(() => {
+        if (!localStorage.getItem('auth')) router.push('/user/login')
+
+        if (router.query.id) {
+            fetchCommentsData()
+            fetchArticleData()
+        }
+    }, [router.query.id]);
+
     async function fetchArticleData() {
         try {
             const url = `${process.env.NEXT_PUBLIC_API_URL}/post/` + router.query.id
@@ -51,15 +60,6 @@ export default function Article() {
             console.log(err)
         }
     }
-
-    useEffect(() => {
-        if (!localStorage.getItem('auth')) router.push('/user/login')
-
-        if (router.query.id) {
-            fetchCommentsData()
-            fetchArticleData()
-        }
-    }, [router.query.id]);
 
     const postLike = async () => {
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/like/${router.query.id}`, {
