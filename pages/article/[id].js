@@ -11,52 +11,52 @@ export default function Article() {
     const [article, setArticle] = useState(null)
     const [comments, setComments] = useState(null)
 
+    async function fetchArticleData() {
+        try {
+            const url = `${process.env.NEXT_PUBLIC_API_URL}/post/` + router.query.id
+            const articleData = await fetch(url, {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                }
+            })
+            if (articleData.status == 401 || articleData.status == 403) {
+                router.push('/user/login')
+                router.reload()
+            }
+            else if (articleData.status == 404) router.push('/404')
+            else if (!articleData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+            else setArticle(await articleData.json())
+        } catch (err) {
+            // window.alert("系統錯誤")
+            console.log(err)
+        }
+    }
+    async function fetchCommentsData() {
+        try {
+            const url = `${process.env.NEXT_PUBLIC_API_URL}/comment/post/` + router.query.id
+            const commentsData = await fetch(url, {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('auth')}`
+                }
+            })
+            if (commentsData.status == 401 || commentsData.status == 403) {
+                router.push('/user/login')
+                router.reload()
+            }
+            else if (!commentsData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+            else setComments(await commentsData.json())
+        } catch (err) {
+            // window.alert("系統錯誤")
+            console.log(err)
+        }
+    }
+
     useEffect(() => {
         if (!localStorage.getItem('auth')) router.push('/user/login')
 
         if (router.query.id) {
-            async function fetchArticleData() {
-                try {
-                    const url = `${process.env.NEXT_PUBLIC_API_URL}/post/` + router.query.id
-                    const articleData = await fetch(url, {
-                        headers: {
-                            'Authorization': `Bearer ${localStorage.getItem('auth')}`
-                        }
-                    })
-                    if (articleData.status == 401 || articleData.status == 403) {
-                        router.push('/user/login')
-                        router.reload()
-                    }
-                    else if (articleData.status == 404) router.push('/404')
-                    else if (!articleData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-                    else setArticle(await articleData.json())
-                } catch (err) {
-                    // window.alert("系統錯誤")
-                    console.log(err)
-                }
-            }
-            async function fetchCommentsData() {
-                try {
-                    const url = `${process.env.NEXT_PUBLIC_API_URL}/comment/post/` + router.query.id
-                    const commentsData = await fetch(url, {
-                        headers: {
-                            'Authorization': `Bearer ${localStorage.getItem('auth')}`
-                        }
-                    })
-                    if (commentsData.status == 401 || commentsData.status == 403) {
-                        router.push('/user/login')
-                        router.reload()
-                    }
-                    else if (!commentsData.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-                    else setComments(await commentsData.json())
-                } catch (err) {
-                    // window.alert("系統錯誤")
-                    console.log(err)
-                }
-            }
-
-            setInterval(fetchArticleData, 1000)
             setInterval(fetchCommentsData, 1000)
+            fetchArticleData()
         }
     }, [router.query.id]);
 
@@ -69,6 +69,9 @@ export default function Article() {
             }
         }).then(async res => {
             if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+            else {
+                fetchArticleData()
+            }
         })
     }
 
