@@ -18,6 +18,8 @@ export default function Search() {
     })
 
     const search = async () => {
+        if (!document.getElementById('form-regex').value) return
+
         const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/search`, {
             method: 'PUT',
             headers: {
