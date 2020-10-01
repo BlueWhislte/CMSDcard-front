@@ -1,21 +1,7 @@
 import Link from 'next/link'
 import { convertDateOnly } from '../../functions/utils'
-import Linkify from 'linkifyjs/react'
 
 export default function Post({ post }) {
-
-    const postLike = async () => {
-        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/like/${post._id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem('auth')}`
-            }
-        }).then(async res => {
-            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-        })
-    }
-
     return (
         <div className="py-3">
             <div className="container">
