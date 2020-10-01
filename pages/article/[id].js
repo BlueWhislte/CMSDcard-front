@@ -143,7 +143,6 @@ export default function Article() {
                                                     </svg>
                                                 </button>
                                             </div>
-                                            <small className="ml-1 text-muted">按 Ctrl + Enter 傳送</small>
 
                                             <Comment comments={Array.from(comments || [])} />
                                         </>
