@@ -68,7 +68,10 @@ export default function Login() {
                                         }</button>
                                     </small>
                                 </div>
-                                <button type="button" className="btn" onClick={postLogin} style={{ background: themeColor, color: "#ffffff" }}>登入</button>
+                                <button type="button" className="btn mb-3" onClick={postLogin} style={{ background: themeColor, color: "#ffffff" }}>登入</button>
+                                <br />
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfX_vsF6EtiJMLmFzj3Iimvqi7QFk14ximkhuHOQn6sLb7Stw/viewform" 
+                                target="_blank">忘記密碼</a>
                             </form>
                         </div>
                     </div>
