@@ -1,4 +1,5 @@
 import Layout from '../component/layout'
+import Link from 'next/link'
 
 export default function AboutUs() {
     return (
@@ -39,6 +40,7 @@ export default function AboutUs() {
                             <p className="lead mb-0">
                                 Email: cmsforum.official@gmail.com <br />
                                 如果有任何使用上的困難、疑問，抑或有任何建議、指教，都歡迎告訴我們!
+                                也可以到<Link href="/blog"><a>部落格</a></Link>連結欄的連結裡提出喔!
                             </p>
                         </div>
                     </div>
