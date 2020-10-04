@@ -45,10 +45,24 @@ export default function New() {
             </div>
 
             <main>
-                {data ?
-                    data.map(post => (
-                        <Post post={post} key={post._id} />
-                    )) : (
+            {data ?
+                    (
+                        Array.from(data).length === 0 ? (
+                            <div className="py-5 mt-5" >
+                                <div className="container">
+                                    <div className="row justify-content-center">
+                                        <div className="col-md-4">
+                                            <div className="text-center">
+                                                <h6>沒有最新文章 :P</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ) : data.map(post => (
+                            <Post post={post} key={post._id} />
+                        ))
+                    ) : (
                         <Loading />
                     )
                 }
