@@ -57,6 +57,7 @@ export default function Article() {
         if (router.query.id) {
             setInterval(fetchCommentsData, 1000)
             fetchArticleData()
+            // fetchCommentsData()
         }
     }, [router.query.id]);
 
@@ -107,7 +108,7 @@ export default function Article() {
                                                 <span style={{fontSize:"large"}}>{article.likeNum}</span>
                                             </a>
                                             <hr />
-                                            <Comment comments={Array.from(comments || [])} postId={article._id} />
+                                            <Comment comments={Array.from(comments || [])} postId={article._id} onComment={fetchCommentsData} />
                                         </> : <Loading />
                                     }
                                 </div>

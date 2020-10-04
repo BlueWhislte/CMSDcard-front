@@ -2,10 +2,11 @@ import { convertBriefTime, themeColor } from '../../functions/utils'
 import Linkify from 'linkifyjs/react'
 import { useEffect } from 'react'
 
-export default function Comment({ comments, postId }) {
+export default function Comment({ comments, postId, onComment }) {
     useEffect(() => {
-        document.getElementById('form-comment').addEventListener('keyup', (e) => {
-            if (e.ctrlKey && e.key === 'Enter') {
+        document.getElementById('form-comment').addEventListener('keypress', (e) => {
+            console.log(e)
+            if (e.ctrlKey && e.code === 'Enter') {
                 postComment()
                 document.getElementById('form-comment').value = ''
             }
@@ -28,7 +29,10 @@ export default function Comment({ comments, postId }) {
         }).then(async res => {
             if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
         })
-            .then(() => document.getElementById('form-comment').value = '')
+            .then(() => {
+                document.getElementById('form-comment').value = ''
+                onComment()
+            })
     }
 
     return (
