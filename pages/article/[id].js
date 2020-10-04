@@ -4,7 +4,7 @@ import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
 import Loading from '../../component/loading'
 import Linkify from 'linkifyjs/react'
-import { convertFullTime, themeColor } from '../../functions/utils'
+import { convertFullTime } from '../../functions/utils'
 
 export default function Article() {
     const router = useRouter()
@@ -61,16 +61,6 @@ export default function Article() {
         }
     }
 
-    useEffect(() => {
-        if (!localStorage.getItem('auth')) router.push('/user/login')
-
-        if (router.query.id) {
-            setInterval(fetchCommentsData, 1000)
-            fetchArticleData()
-            // fetchCommentsData()
-        }
-    }, [router.query.id]);
-
     const postLike = async () => {
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/like/${router.query.id}`, {
             method: 'PUT',
@@ -84,28 +74,6 @@ export default function Article() {
                 fetchArticleData()
             }
         })
-    }
-
-    const postComment = async () => {
-        if (!document.getElementById('form-comment').value) return
-
-        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/comment/${article._id}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem('auth')}`
-            },
-            body: JSON.stringify({
-                authorId: '5f28c3d328666f21bca62f7e',
-                content: document.getElementById('form-comment').value
-            })
-        }).then(async res => {
-            if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
-        })
-            .then(() => {
-                document.getElementById('form-comment').value = ''
-                fetchCommentsData()
-            })
     }
 
     return (
