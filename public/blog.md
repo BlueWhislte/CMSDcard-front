@@ -5,6 +5,7 @@
 - <a href="https://docs.google.com/forms/d/e/1FAIpQLSd91TdZAe9bZ5ILdLalETBV0TtpJnpWzogQmsClzp3K5wrRZQ/viewform" target="_blank">檢舉回報</a>
 - <a href="https://docs.google.com/forms/d/e/1FAIpQLSeceRiZEqRFyCRfgXuB8AqjgdK2E8_NYNOcDu0aGC39GQOWsA/viewform" target="_blank">錯誤回報</a>
 - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4iXNt-bGVTOvtdylAXl2eQd-nsOd-2uZKQ-8wDaLkQQy07g/viewform" target="_blank">疑問求解</a>
+- <a href="https://sites.google.com/my.cmsh.cyc.edu.tw/cmsforum-policies/%E9%A6%96%E9%A0%81" target="_blank">相關政策</a>
 
 
 ---
