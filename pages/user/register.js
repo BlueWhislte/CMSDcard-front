@@ -48,7 +48,7 @@ export default function Register() {
                                 <div className="form-group">
                                     <label htmlFor="form16">暱稱</label>
                                     <small className="ml-3 text-muted">最好別人都認不出你</small>
-                                    <input type="text" className="form-control" id="form-name" placeholder="協同金城武、真難溶於水..." autoComplete="off" />
+                                    <input type="text" className="form-control" id="form-name" placeholder="協同金城武、真難溶於水..." maxLength={30} autoComplete="off" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="form18">電子郵件</label>
