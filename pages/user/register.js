@@ -64,7 +64,7 @@ export default function Register() {
                                     <input type="checkbox" id="agree-protocol" />
                                     <label className="ml-1">
                                         我同意
-                                        <a href="https://docs.google.com/document/d/1KtvH_JEODVn2TRd_HEeAGDxbrXYx5ST9iZ9J8Yz4CQU/edit?usp=sharing" 
+                                        <a href="https://sites.google.com/my.cmsh.cyc.edu.tw/cmsforum-policies/%E9%A6%96%E9%A0%81" 
                                         target="_blank">使用者條款與隱私權政策</a>
                                     </label>
                                 </div>
