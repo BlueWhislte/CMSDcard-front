@@ -8,7 +8,7 @@ export default function Login() {
     const [showPass, setShowPass] = useState(false)
 
     useEffect(() => {
-        if (localStorage.getItem('auth')) router.push('/article/hot')
+        if (localStorage.getItem('auth')) router.push('/article/new')
 
         document.getElementById('form-pass').addEventListener('keyup', (e)=>{
             if (e.key === 'Enter') postLogin()

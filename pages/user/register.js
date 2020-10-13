@@ -11,7 +11,7 @@ export default function Register() {
         setToken(localStorage.getItem('auth'))
     })
 
-    if (token) router.push('/article/hot')
+    if (token) router.push('/article/new')
 
     const postRegister = async () => {
         if (!document.getElementById('form-name').value) return window.alert('Sorry!  Σ(･口･)   記得填你名字啦')
