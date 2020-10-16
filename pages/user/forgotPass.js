@@ -10,7 +10,7 @@ export default function forgotPass() {
             }
         })
             .then(async res => {
-                if (!res.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+                if (!res.ok) return document.getElementById('form-email').value = ''
                 else {
                     window.alert('修復密碼郵件已送至您的信箱!')
                     document.getElementById('form-email').value = ''
