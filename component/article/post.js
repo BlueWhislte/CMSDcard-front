@@ -19,7 +19,7 @@ export default function Post({ post }) {
                                     <a style={{textDecoration:'none'}}>
                                         <h5 className="text-dark">{post.title}</h5>
                                         <p className="mb-3 text-muted col-md-10">
-                                            {post.content.slice(0, 150) + ' ......'}
+                                            {post.content.slice(0, 60) + ' ......'}
                                         </p>
                                     </a>
                                 </Link>
