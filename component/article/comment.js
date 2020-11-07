@@ -54,7 +54,7 @@ export default function Comment({ comments, postId, onComment }) {
                 {comments.map(comment => (
                     <div className="list-group-item list-group-item-action flex-column align-items-start" key={comment._id}>
                         <div className="d-flex w-100 justify-content-between">
-                            <h6 className="mb-1" onClick={() => { setComment(comment.authorName + ' ') }}>{comment.authorName}</h6>
+                            <h6 className="mb-1" style={{cursor: "pointer"}} onClick={() => { setComment(comment.authorName + ' ') }}>{comment.authorName}</h6>
                             <small className="text-muted">{convertBriefTime(comment.postTime)}</small>
                         </div>
                         <Linkify className="my-1" tagName="p" style={{ whiteSpace: "pre-line" }}>{comment.content}</Linkify>
