@@ -57,7 +57,13 @@ export default function Comment({ comments, postId, onComment }) {
                             <h6 className="mb-1" style={{cursor: "pointer"}} onClick={() => { setComment(comment.authorName + ' ') }}>{comment.authorName}</h6>
                             <small className="text-muted">{convertBriefTime(comment.postTime)}</small>
                         </div>
-                        <Linkify className="my-1" tagName="p" style={{ whiteSpace: "pre-line" }}>{comment.content}</Linkify>
+                        {comment.authorName ? 
+                            <Linkify className="my-1" tagName="p" style={{ whiteSpace: "pre-line" }}>{comment.content}</Linkify>
+                        :
+                        <Linkify className="my-1" tagName="p" style={{ whiteSpace: "pre-line", color: "#696964" }}>
+                            <i>{comment.content}</i>
+                        </Linkify>
+                        }
                     </div>
                 ))}
             </div>
