@@ -57,8 +57,16 @@ export default function New() {
 
     return (
         <Layout>
-            <HotArticles data={hotData} />
-            <NewArticles data={data} />
+            <div className="py-3">
+                <div className="container">
+                    <div className="row">
+                        <HotArticles data={hotData} />
+                    </div>
+                    <div className="row">
+                        <NewArticles data={data} />
+                    </div>
+                </div>
+            </div>
         </Layout>
     )
 }
