@@ -31,7 +31,7 @@ export default function HotArticles({ data }) {
                     )
                         :
                         (
-                            <div class="container">
+                            <div class="container" style={{ overflowX: "auto", overflowY: "hidden", whiteSpace: "nowrap" }}>
                                 <div class="row">
                                     {data.map(post => (
                                         <Post post={post} size={4} key={post._id} />
