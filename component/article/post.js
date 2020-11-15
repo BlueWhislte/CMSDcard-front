@@ -10,16 +10,20 @@ export default function Post({ post }) {
                         <div className="card">
                             <div className="card-header">
                                 <div className="d-flex justify-content-between">
-                                    <div>{post.authorName}</div>
+                                    <div>{!post.isDeleted ? post.authorName : ""}</div>
                                     <div>{convertDateOnly(post.postTime)}</div>
                                 </div>
                             </div>
                             <div className="card-body">
                                 <Link href={`/article/${post._id}`}>
-                                    <a style={{textDecoration:'none'}}>
-                                        <h5 className="text-dark">{post.title}</h5>
+                                    <a style={{ textDecoration: 'none' }}>
+                                        <h5 className="text-dark">{!post.isDeleted ? post.title : "文章已刪除"}</h5>
                                         <p className="mb-3 text-muted col-md-10">
-                                            {post.content.slice(0, 60) + ' ......'}
+                                            {!post.isDeleted ?
+                                                post.content.slice(0, 60) + ' ......'
+                                                :
+                                                "! 文章已遭刪除 !"
+                                            }
                                         </p>
                                     </a>
                                 </Link>

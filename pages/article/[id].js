@@ -94,12 +94,18 @@ export default function Article() {
                                 <div className="col">
                                     {
                                         article ? <>
-                                            <h3>{article.authorName}</h3>
+                                            <h3>{!article.isDeleted ? article.authorName : "未知作者"}</h3>
                                             <h6 className="text-muted">{convertFullTime(article.postTime)}</h6>
                                             <hr />
-                                            <h3>{article.title}</h3>
+                                            <h3>{!article.isDeleted ? article.title : "文章已刪除"}</h3>
                                             <p style={{ whiteSpace: "pre-line" }}>
-                                                <Linkify>{article.content}</Linkify>
+                                                {!article.isDeleted ?
+                                                    <Linkify>{article.content}</Linkify>
+                                                    :
+                                                    <i>{`! 文章已遭刪除 !
+                                                    此留言違反社群守則：
+                                                    「禁止不雅、侮辱、歧視及攻擊詞語」`}</i>
+                                                }
                                             </p>
                                             <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" onClick={postLike} style={{ textDecoration: "none" }}>
                                                 {article.hasLiked ?
