@@ -94,16 +94,16 @@ export default function Article() {
                                 <div className="col">
                                     {
                                         article ? <>
-                                            <h3>{!article.isDeleted ? article.authorName : "未知作者"}</h3>
+                                            <h3>{article.authorName}</h3>
                                             <h6 className="text-muted">{convertFullTime(article.postTime)}</h6>
                                             <hr />
-                                            <h3>{!article.isDeleted ? article.title : "文章已刪除"}</h3>
+                                            <h3>{!article.isDeleted ? article.title : ""}</h3>
                                             <p style={{ whiteSpace: "pre-line" }}>
                                                 {!article.isDeleted ?
                                                     <Linkify>{article.content}</Linkify>
                                                     :
-                                                    <i>{`! 文章已遭刪除 !
-                                                    此留言違反社群守則：
+                                                    <i>{`! 文章內容已遭移除 !
+                                                    此文章違反社群守則：
                                                     「禁止不雅、侮辱、歧視及攻擊詞語」`}</i>
                                                 }
                                             </p>
