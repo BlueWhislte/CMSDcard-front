@@ -25,7 +25,7 @@ export default function Post() {
                 content: document.getElementById('form-content').value
             })
         }).then(async res => {
-            if (res.ok) router.push(`/article/new`)
+            if (res.ok) router.push(`/article/home`)
             else if (res.status == 400) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
         })
     }

@@ -30,13 +30,8 @@ export default function Nav() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link href="/article/hot">
-                                <a className="nav-link" style={{ color: "#aaaaaa" }}>熱門文章</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href={token ? "/article/new" : "/user/login"}>
-                                <a className="nav-link" style={{ color: "#aaaaaa" }}>最新文章</a>
+                            <Link href={token ? "/article/home" : "/user/login"}>
+                                <a className="nav-link" style={{ color: "#aaaaaa" }}>首頁</a>
                             </Link>
                         </li>
                         <li className="nav-item">
