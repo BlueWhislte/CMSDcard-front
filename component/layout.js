@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Top from './top'
-import Nav from './nav'
-import { themeColor } from '../functions/utils'
+import Top from './block/top'
+import Nav from './block/nav'
 
 export default function Layout({ children }) {
     return (

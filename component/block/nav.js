@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { themeColor } from '../functions/utils'
+import { themeColor } from '../../functions/utils'
 import { Navbar } from 'react-bootstrap'
 
 export default function Nav() {
