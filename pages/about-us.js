@@ -51,8 +51,7 @@ export default function AboutUs() {
                                 本網站由藍哨子團隊架設，為一開源專案，歡迎凡是有能力、有意願的協同人一同維護這個論壇。
                             </p>
                             <p className="lead mt-2">
-                                <a className="mr-2" target="_blank" href="https://github.com/BlueWhislte/CMSDcard-front">前端原始碼</a>
-                                <a className="ml-2" target="_blank" href="https://github.com/BlueWhislte/CMSDcard-back">後端原始碼</a>
+                                <a className="mr-2" target="_blank" href="https://github.com/BlueWhislte/CMSDcard-front">網站原始碼</a>
                             </p>
                         </div>
                         <div className="p-4 col-lg-2">
