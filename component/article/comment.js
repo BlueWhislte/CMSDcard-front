@@ -54,15 +54,17 @@ export default function Comment({ comments, postId, onComment }) {
                 {comments.map(comment => (
                     <div className="list-group-item list-group-item-action flex-column align-items-start" key={comment._id}>
                         <div className="d-flex w-100 justify-content-between">
-                            <h6 className="mb-1" style={{cursor: "pointer"}} onClick={() => { setComment(comment.authorName + ' ') }}>{comment.authorName}</h6>
+                            <h6 className="mb-1" style={{ cursor: "pointer" }} onClick={() => { setComment(comment.authorName + ' ') }}>{!comment.isDeleted ? comment.authorName : ""}</h6>
                             <small className="text-muted">{convertBriefTime(comment.postTime)}</small>
                         </div>
-                        {comment.authorName ? 
+                        {!comment.isDeleted ?
                             <Linkify className="my-1" tagName="p" style={{ whiteSpace: "pre-line" }}>{comment.content}</Linkify>
-                        :
-                        <Linkify className="my-1" tagName="p" style={{ whiteSpace: "pre-line", color: "#696964" }}>
-                            <i>{comment.content}</i>
-                        </Linkify>
+                            :
+                            <p className="my-1" style={{ whiteSpace: "pre-line", color: "#696964" }}>
+                                <i>{`! 文章內容已遭移除 !
+                                    此文章違反社群守則：
+                                    「禁止不雅、侮辱、歧視及攻擊詞語」`}</i>
+                            </p>
                         }
                     </div>
                 ))}
