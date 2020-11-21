@@ -34,7 +34,7 @@ export default function Search() {
             router.push('/user/login')
             router.reload()
         }
-        else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+        else if (!data.ok) return window.alert('Sorry!  Σ(･口･)   ' + await data.text())
         else setData(await data.json())
     }
 
