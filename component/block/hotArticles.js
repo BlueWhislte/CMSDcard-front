@@ -2,6 +2,8 @@ import Post from '../article/post'
 import Loading from '../loading'
 
 export default function HotArticles({ data }) {
+    const length = data ? Array.from(data).length : 0
+
     return (
         <>
             <div className="py-3">
@@ -16,11 +18,11 @@ export default function HotArticles({ data }) {
 
             {data ?
                 (
-                    Array.from(data).length === 0 ? (
-                        <div className="py-4" >
-                            <div className="container">
+                    length === 0 ? (
+                        <div className="container" >
+                            <div className="py-4">
                                 <div className="row justify-content-center">
-                                    <div className="col-md-4">
+                                    <div className="col-md-12">
                                         <div className="text-center">
                                             <h6>最近沒有熱門文章 :P</h6>
                                         </div>
@@ -31,10 +33,12 @@ export default function HotArticles({ data }) {
                     )
                         :
                         (
-                            <div class="container" style={{ overflowX: "auto", overflowY: "hidden", whiteSpace: "nowrap" }}>
+                            <div class="container">
                                 <div class="row">
                                     {data.map(post => (
-                                        <Post post={post} size={4} key={post._id} />
+                                        <>
+                                            <Post post={post} size={4} key={post._id} />
+                                        </>
                                     ))}
                                 </div>
                             </div>

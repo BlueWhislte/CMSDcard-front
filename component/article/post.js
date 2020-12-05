@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { convertDateOnly } from '../../functions/utils'
 
 export default function Post({ post, size }) {
-    const slice = size ? 10 : 60
+    // const slice = size ? 814 : 60
+    const slice = 60
 
     return (
         <div className={`col-md-${size ? size : 12}`}>
