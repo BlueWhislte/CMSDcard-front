@@ -12,9 +12,9 @@ export default function Search() {
     useEffect(() => {
         if (!localStorage.getItem('auth')) router.push('/user/login')
 
-        document.getElementById('form-regex').addEventListener('keyup', (e) => {
-            if (e.key === 'Enter') search()
-        })
+        // document.getElementById('form-regex').addEventListener('keyup', (e) => {
+        //     if (e.key === 'Enter') search()
+        // })
     })
 
     const search = async (page) => {
