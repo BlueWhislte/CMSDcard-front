@@ -1,12 +1,12 @@
 # write on nodejs image
-FROM node:latest
+FROM node:lts-alpine
 
 # working directory
 WORKDIR /app
 
 # install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # copy whole src files
 COPY . .
