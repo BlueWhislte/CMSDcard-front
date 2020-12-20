@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { convertDateOnly } from '../../functions/utils'
 
 export default function Post({ post, size }) {
-    // const slice = size ? 814 : 60
     const slice = 60
 
     return (
@@ -19,7 +18,7 @@ export default function Post({ post, size }) {
                         <Link href={`/article/${post._id}`}>
                             <a style={{ textDecoration: 'none' }}>
                                 <h5 className="text-dark">{post.title}</h5>
-                                <p className="mb-3 text-muted col-md-10">
+                                <p className={"mb-3 text-muted col-md-10" + (size ? " d-none d-sm-block" : "")}>
                                     {post.content.slice(0, slice) + ' ......'}
                                 </p>
                             </a>
