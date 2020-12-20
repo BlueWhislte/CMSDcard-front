@@ -18,7 +18,7 @@ export default function Article() {
             fetchCommentsData()
             fetchArticleData()
         }
-    }, [router.query.id]);
+    }, []);
 
     async function fetchArticleData() {
         try {

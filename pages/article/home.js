@@ -21,11 +21,7 @@ export default function New() {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-            if (data.status == 401 || data.status == 403) {
-                router.push('/user/login')
-                router.reload()
-            }
-            else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+            if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
             else setData(await data.json())
         } catch (err) {
             // window.alert("系統錯誤")
@@ -40,12 +36,7 @@ export default function New() {
                     'Authorization': `Bearer ${localStorage.getItem('auth')}`
                 }
             })
-
-            if (data.status == 401 || data.status == 403) {
-                router.push('/user/login')
-                router.reload()
-            }
-            else if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
+            if (!data.ok) window.alert('Sorry!  Σ(･口･)   ' + await res.text())
             else {
                 setHotData(await data.json())
             }
