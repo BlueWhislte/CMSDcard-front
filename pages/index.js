@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter()
 
   useEffect(() => {
-    if (localStorage.getItem('auth')) router.push('/article/new')
+    if (localStorage.getItem('auth')) router.push('/article/home')
   })
 
   return (

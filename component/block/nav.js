@@ -14,29 +14,18 @@ export default function Nav() {
         <Navbar expand="md" sticky="top" style={{ backgroundColor: "#111111" }} >
             <div className="container">
                 <Navbar.Brand>
-                    {token ? (
-                        <div className="navbar-brand">
+                    <Link href={token ? "/article/home" : "/"}>
+                        <a className="navbar-brand">
                             <img className="d-inline" src="/img/shorts.png" />
-                        </div>
-                    ) : (
-                            <Link href="/">
-                                <a className="navbar-brand">
-                                    <img className="d-inline" src="/img/shorts.png" />
-                                </a>
-                            </Link>
-                        )}
+                        </a>
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor: "#aaaaaa" }} />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link href="/article/hot">
-                                <a className="nav-link" style={{ color: "#aaaaaa" }}>熱門文章</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href={token ? "/article/new" : "/user/login"}>
-                                <a className="nav-link" style={{ color: "#aaaaaa" }}>最新文章</a>
+                            <Link href="/article/home">
+                                <a className="nav-link" style={{ color: "#aaaaaa" }}>首頁</a>
                             </Link>
                         </li>
                         <li className="nav-item">
