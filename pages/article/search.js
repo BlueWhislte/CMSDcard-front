@@ -54,7 +54,7 @@ export default function Search() {
                             <div className="row justify-content-center">
                                 <input type="text" className="form-control col-md-8 col-8 mr-1" id="form-regex" placeholder="關鍵字"
                                     onChange={(e) => setRegex(e.target.value)} />
-                                <button type="button" className="btn" onClick={()=>search()}>
+                                <button type="button" className="btn" onClick={() => search()}>
                                     <i className="fa fa-search mr-1" aria-hidden="true" />
                                     搜尋
                             </button>
@@ -65,17 +65,17 @@ export default function Search() {
             </div>
 
             <main>
-                {data && data.length != 0 ?
-                    data.docs.map(post => (
-                        <Post post={post} key={post._id} />
-                    )) : (
-                        <div className="container text-center my-5 py-5">
-                            <p>無項目</p>
-                        </div>
-                    )
-                }
                 <div className="container">
-                    <div className="row justify-content-center">
+                    {data && data.length != 0 ?
+                        data.docs.map(post => (
+                            <Post post={post} key={post._id} />
+                        )) : (
+                            <div className="text-center my-5 py-5">
+                                <p>無項目</p>
+                            </div>
+                        )
+                    }
+                    <div className="row justify-content-center my-5">
                         <PagingButtons totalPage={data && data.totalPages || 0} currPage={data && data.page || 0} changePage={search} />
                     </div>
                 </div>
