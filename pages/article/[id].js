@@ -58,6 +58,7 @@ export default function Article() {
     }
 
     const postLike = async () => {
+        if (article.isDeleted) return
         return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post/like/${router.query.id}`, {
             method: 'PUT',
             headers: {
@@ -99,7 +100,7 @@ export default function Article() {
                                                     <Linkify>{article.content}</Linkify>
                                                     :
                                                     <i>{`! 文章內容已遭移除 !
-                                                    此文章違反社群守則：
+                                                    此文章已遭檢舉違反社群守則：
                                                     「禁止不雅、侮辱、歧視及攻擊詞語」`}</i>
                                                 }
                                             </p>
@@ -111,7 +112,7 @@ export default function Article() {
                                                 <span style={{ fontSize: "large" }}>{article.likeNum}</span>
                                             </a>
                                             <hr />
-                                            <Comment comments={Array.from(comments || [])} postId={article._id} onComment={fetchCommentsData} />
+                                            <Comment comments={Array.from(comments || [])} postId={article._id} onComment={fetchCommentsData} articleIsDeleted={article.isDeleted} />
                                         </> : <Loading />
                                     }
                                 </div>
