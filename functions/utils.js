@@ -53,3 +53,11 @@ export function convertDateOnly(iso) {
 }
 
 export const themeColor = "#7BA23F"
+
+export const violationCode = [
+    "禁止不雅、侮辱、歧視及攻擊詞語",
+    "禁止不雅、侮辱、歧視及攻擊詞語",
+    "涉及毀謗他人之名譽",
+    "不得指名或透漏任何學生的身份",
+    "嚴禁張貼不正當的外部連結"
+]

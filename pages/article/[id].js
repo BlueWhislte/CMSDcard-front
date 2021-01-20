@@ -4,7 +4,7 @@ import Layout from '../../component/layout'
 import Comment from '../../component/article/comment'
 import Loading from '../../component/loading'
 import Linkify from 'linkifyjs/react'
-import { convertFullTime } from '../../functions/utils'
+import { convertFullTime, violationCode } from '../../functions/utils'
 
 export default function Article() {
     const router = useRouter()
@@ -101,7 +101,7 @@ export default function Article() {
                                                     :
                                                     <i>{`! 文章內容已遭移除 !
                                                     此文章已遭檢舉違反社群守則：
-                                                    「禁止不雅、侮辱、歧視及攻擊詞語」`}</i>
+                                                    「${violationCode[article.violationCode]}」`}</i>
                                                 }
                                             </p>
                                             <a className="btn py-0 px-1 pt-0 btn-link mt-1 mb-1 text-warning" onClick={postLike} style={{ textDecoration: "none" }}>
