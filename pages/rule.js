@@ -5,7 +5,7 @@ import Layout from '../component/layout'
 
 export default function Rule({contentHtml}) {
     return (
-        <Layout>
+        <Layout title="社群守則">
             <div className="container pt-3">
                 <div className="row">
                     <div className="col-md-12">

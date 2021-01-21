@@ -31,7 +31,7 @@ export default function Post() {
     }
 
     return (
-        <Layout>
+        <Layout title="我要投稿">
             <div className="py-5 text-center mt-3" >
                 <div className="container">
                     <div className="row">

@@ -44,7 +44,7 @@ export default function Search() {
     }
 
     return (
-        <Layout>
+        <Layout title="搜尋文章">
             <div className="py-3">
                 <div className="container">
                     <div className="row">

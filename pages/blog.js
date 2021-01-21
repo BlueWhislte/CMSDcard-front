@@ -5,7 +5,7 @@ import Layout from '../component/layout'
 
 export default function Blog({ contentHtml }) {
     return (
-        <Layout>
+        <Layout title="部落格">
             <div className="py-3">
                 <div className="container">
                     <div className="row">

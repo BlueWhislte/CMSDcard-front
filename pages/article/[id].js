@@ -74,7 +74,7 @@ export default function Article() {
     }
 
     return (
-        <Layout>
+        <Layout title={article ? article.title : null}>
             <div className="py-5">
                 <div className="container">
                     <div className="row justify-content-center">

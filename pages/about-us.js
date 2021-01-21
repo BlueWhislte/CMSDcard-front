@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function AboutUs() {
     return (
-        <Layout>
+        <Layout title="關於我們">
             <div className="py-3">
                 <div className="container">
                     <div className="row">

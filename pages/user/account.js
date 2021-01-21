@@ -73,7 +73,7 @@ export default function Account() {
     }
 
     return (
-        <Layout>
+        <Layout title="我的帳號">
             <div className="py-3">
                 <div className="container">
                     <div className="row">
