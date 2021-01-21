@@ -39,7 +39,7 @@ export function convertBriefTime(iso) {
     else if (ms < oneDay) return '' + Math.floor(ms / oneHour) + '小時前'
     else if (ms < oneWeek) return '' + Math.floor(ms / oneDay) + '天前'
     else if (ms < oneMonth) return '' + Math.floor(ms / oneWeek) + '週前'
-    else if (ms < oneYear) return '' + Math.floor(ms / oneWeek) + '個月前'
+    else if (ms < oneYear) return '' + Math.floor(ms / oneMonth) + '個月前'
     else return '' + Math.floor(ms % oneYear) + '年前'
 }
 
