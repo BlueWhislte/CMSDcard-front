@@ -22,7 +22,7 @@ export default function Account() {
             })
             if (data.status == 401 || data.status == 403) {
                 router.push('/user/login')
-                router.reload()
+                // router.reload()
             }
             else setUser(await data.json())
         } catch (err) {
